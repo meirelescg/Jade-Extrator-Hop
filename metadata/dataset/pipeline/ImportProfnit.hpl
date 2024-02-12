@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline>
+  <info>
+    <name>ImportProfnit</name>
+    <name_sync_with_filename>Y</name_sync_with_filename>
+    <description/>
+    <extended_description/>
+    <pipeline_version/>
+    <pipeline_type>Normal</pipeline_type>
+    <parameters>
+    </parameters>
+    <capture_transform_performance>N</capture_transform_performance>
+    <transform_performance_capturing_delay>1000</transform_performance_capturing_delay>
+    <transform_performance_capturing_size_limit>100</transform_performance_capturing_size_limit>
+    <created_user>-</created_user>
+    <created_date>2023/08/15 20:59:40.085</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2023/08/15 20:59:40.085</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+    <hop>
+      <from>Add constants</from>
+      <to>Calculator</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Calculator</from>
+      <to>Select values table</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values table</from>
+      <to>Table insert graduate_program</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values researcher</from>
+      <to>Sort rows researcher</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows </from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows researcher</from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>String operation</from>
+      <to>Sort rows </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Table researcher</from>
+      <to>Select values researcher</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Microsoft Excel input</from>
+      <to>Select values  Relatório </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values  Relatório </from>
+      <to>String operation</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Merge join</from>
+      <to>Add constants</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Table insert graduate_program</from>
+      <to>Select values table 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values table 2</from>
+      <to>Block until transforms finish</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Block until transforms finish</from>
+      <to>Table insert graduate_program_researcher</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <transform>
+    <name>Add constants</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-1</length>
+        <name>PROFNIT</name>
+        <nullif>PROFNIT</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Barra</name>
+        <nullif> - </nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>rating</name>
+        <nullif>4</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>Integer</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>modality</name>
+        <nullif>PROFISSIONAL</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>year</name>
+        <nullif>2023</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>Integer</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>848</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Block until transforms finish</name>
+    <type>BlockUntilTransformsFinish</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <transforms>
+      <transform>
+        <name>Table insert graduate_program</name>
+      </transform>
+    </transforms>
+    <attributes/>
+    <GUI>
+      <xloc>1728</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <calculation>
+      <calc_type>ADD3</calc_type>
+      <field_a>PROFNIT</field_a>
+      <field_b>Barra</field_b>
+      <field_c>IES Sigla do Docente</field_c>
+      <field_name>Program</field_name>
+      <remove>N</remove>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <value_type>String</value_type>
+    </calculation>
+    <failIfNoFile>Y</failIfNoFile>
+    <attributes/>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Merge join</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <keys_1>
+      <key>researcher_name</key>
+    </keys_1>
+    <keys_2>
+      <key>Nome Docente</key>
+    </keys_2>
+    <transform1>Sort rows researcher</transform1>
+    <transform2>Sort rows </transform2>
+    <attributes/>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Microsoft Excel input</name>
+    <type>ExcelInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <accept_filenames>N</accept_filenames>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_ignored>N</error_ignored>
+    <error_line_files_extension>error</error_line_files_extension>
+    <error_line_skipped>N</error_line_skipped>
+    <fields>
+      <field>
+        <length>-1</length>
+        <name>Identificador do PPG</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Código do PPG</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Nome do PPG</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Área de Avaliação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>IES Sigla</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>IES Nome</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Identificador do Docente</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Identificador da Pessoa</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Nome Docente</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Tipo de documento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Número do documento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Número do currículo Lattes</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Tipo vínculo</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Regime de Trabalho</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Data de Admissão</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Data de Desligamento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Categoria</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Início da Categoria</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Fim da Categoria</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Carga Horária PG (Semanal)</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>IES Sigla do Docente</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>IES Nome do Docente</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Tipo de Bolsa CNPq</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Modalidade da Bolsa CNPq</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Categoria da Bolsa CNPq</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>País</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Nacionalidade</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Data de Nascimento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>E-mail</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>ORCID</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Abreviatura</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Titulação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Ano Titulação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Área de Conhecimento Titulação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>País da IES da Titulação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>IES Sigla da Titulação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>IES Nome da Titulação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Orientações de Mestrado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Orientações de Doutorado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Coorientações de Mestrado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Coorientações de Doutorado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Orientações de Monografia</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Número de Disciplinas da Graduação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Orientações de Iniciação Científica</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Orientações de Tutoria</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Carga Horária na Graduação (Anual)</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Orientações Externas de Mestrado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Orientações Externas de Mestrado Profissional</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Orientações Externas de Doutorado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Orientações Externas de Doutorado Profissional</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Coorientações Externas de Mestrado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Coorientações Externas de Mestrado Profissional</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Coorientações Externas de Doutorado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Coorientações Externas de Doutorado Profissional</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Quantidade de Afastamento(s) no Ano</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Último Afastamento Motivo</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Último Afastamento Início</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Último Afastamento Fim</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>Possui vínculo com PCI?</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+    </fields>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/csv/relatorio_Docentes.2023_01.08.23.xlsx</name>
+    </file>
+    <header>Y</header>
+    <limit>0</limit>
+    <line_number_files_extension>line</line_number_files_extension>
+    <noempty>Y</noempty>
+    <sheets>
+      <sheet>
+        <name>Docentes</name>
+        <startcol>0</startcol>
+        <startrow>0</startrow>
+      </sheet>
+    </sheets>
+    <spreadsheet_type>POI</spreadsheet_type>
+    <stoponempty>N</stoponempty>
+    <strict_types>N</strict_types>
+    <attributes/>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>400</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values  Relatório </name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>IES Sigla do Docente</name>
+      </field>
+      <field>
+        <name>Titulação</name>
+      </field>
+      <field>
+        <name>Área de Conhecimento Titulação</name>
+      </field>
+      <field>
+        <name>Categoria</name>
+      </field>
+      <field>
+        <name>Código do PPG</name>
+      </field>
+      <field>
+        <name>Nome Docente</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>288</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values researcher</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>id</name>
+        <rename>researcher_id</rename>
+      </field>
+      <field>
+        <name>name</name>
+        <rename>researcher_name</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>128</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values table</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Titulação</name>
+      </field>
+      <field>
+        <name>Área de Conhecimento Titulação</name>
+      </field>
+      <field>
+        <name>Program</name>
+      </field>
+      <field>
+        <name>Código do PPG</name>
+      </field>
+      <field>
+        <name>rating</name>
+      </field>
+      <field>
+        <name>modality</name>
+      </field>
+      <field>
+        <name>Categoria</name>
+      </field>
+      <field>
+        <name>year</name>
+      </field>
+      <field>
+        <name>researcher_id</name>
+      </field>
+      <field>
+        <name>researcher_name</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values table 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>year</name>
+      </field>
+      <field>
+        <name>researcher_id</name>
+      </field>
+      <field>
+        <name>program_id</name>
+      </field>
+      <field>
+        <name>Categoria</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1520</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Sort rows </name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>${java.io.tmpdir}</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>288</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Sort rows researcher</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>${java.io.tmpdir}</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>researcher_name</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>560</xloc>
+      <yloc>128</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>String operation</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>Nome Docente</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>lower</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Titulação</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>upper</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>288</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Table insert graduate_program</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <commit>100000</commit>
+    <connection>cimatec</connection>
+    <fields>
+      <field>
+        <column_name>code</column_name>
+        <stream_name>Código do PPG</stream_name>
+      </field>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>Program</stream_name>
+      </field>
+      <field>
+        <column_name>area</column_name>
+        <stream_name>Área de Conhecimento Titulação</stream_name>
+      </field>
+      <field>
+        <column_name>modality</column_name>
+        <stream_name>modality</stream_name>
+      </field>
+      <field>
+        <column_name>type</column_name>
+        <stream_name>Titulação</stream_name>
+      </field>
+      <field>
+        <column_name>rating</column_name>
+        <stream_name>rating</stream_name>
+      </field>
+    </fields>
+    <ignore_errors>N</ignore_errors>
+    <only_when_have_rows>N</only_when_have_rows>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <return_field>program_id</return_field>
+    <return_keys>Y</return_keys>
+    <schema>"public"</schema>
+    <specify_fields>Y</specify_fields>
+    <table>graduate_program</table>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_in_table>Y</tablename_in_table>
+    <truncate>N</truncate>
+    <use_batch>N</use_batch>
+    <attributes/>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Table insert graduate_program_researcher</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <commit>100000</commit>
+    <connection>Simcc_DB</connection>
+    <fields>
+      <field>
+        <column_name>year</column_name>
+        <stream_name>year</stream_name>
+      </field>
+      <field>
+        <column_name>researcher_id</column_name>
+        <stream_name>researcher_id</stream_name>
+      </field>
+      <field>
+        <column_name>graduate_program_id</column_name>
+        <stream_name>program_id</stream_name>
+      </field>
+      <field>
+        <column_name>type_</column_name>
+        <stream_name>Categoria</stream_name>
+      </field>
+    </fields>
+    <ignore_errors>N</ignore_errors>
+    <only_when_have_rows>N</only_when_have_rows>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <return_field/>
+    <return_keys>N</return_keys>
+    <schema>"public"</schema>
+    <specify_fields>Y</specify_fields>
+    <table>graduate_program_researcher</table>
+    <tablename_field/>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_in_table>Y</tablename_in_table>
+    <truncate>N</truncate>
+    <use_batch>N</use_batch>
+    <attributes/>
+    <GUI>
+      <xloc>1728</xloc>
+      <yloc>384</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Table researcher</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Simcc_DB</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT
+  id
+, "name"
+FROM "public".researcher
+</sql>
+    <variables_active>N</variables_active>
+    <attributes/>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>128</yloc>
+    </GUI>
+  </transform>
+  <transform_error_handling>
+  </transform_error_handling>
+  <attributes/>
+</pipeline>
