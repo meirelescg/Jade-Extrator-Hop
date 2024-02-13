@@ -42,7 +42,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${PROJECT_HOME}/metadata/dataset/csv/Country.csv</filename>
+    <filename>${PROJECT_HOME}/metadata/dataset/csv/country.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -132,23 +132,18 @@
     <fields>
       <field>
         <name>id</name>
-        <rename/>
       </field>
       <field>
         <name>name</name>
-        <rename/>
       </field>
       <field>
         <name>name_pt</name>
-        <rename/>
       </field>
       <field>
         <name>alpha_2_code</name>
-        <rename/>
       </field>
       <field>
         <name>alpha_3_code</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -177,14 +172,11 @@
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>N</specify_fields>
     <table>country</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>

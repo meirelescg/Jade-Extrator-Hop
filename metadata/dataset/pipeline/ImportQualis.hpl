@@ -42,7 +42,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${PROJECT_HOME}/metadata/dataset/csv/Qualis_capes.csv</filename>
+    <filename>${PROJECT_HOME}/metadata/dataset/csv/qualis.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -68,7 +68,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>Titulo</name>
+        <name>Título</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -79,7 +79,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>Area de Avaliacao</name>
+        <name>Area de Avaliação</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -125,7 +125,6 @@
         <condition>=</condition>
         <field>issn</field>
         <name>ISSN</name>
-        <name2/>
       </key>
       <schema>"public"</schema>
       <table>periodical_magazine</table>
