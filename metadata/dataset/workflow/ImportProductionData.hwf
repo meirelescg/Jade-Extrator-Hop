@@ -27,7 +27,7 @@
       <weekDay>1</weekDay>
       <parallel>N</parallel>
       <xloc>48</xloc>
-      <yloc>208</yloc>
+      <yloc>32</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -52,8 +52,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>320</xloc>
-      <yloc>48</yloc>
+      <xloc>272</xloc>
+      <yloc>32</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -78,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>208</xloc>
-      <yloc>144</yloc>
+      <xloc>176</xloc>
+      <yloc>160</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -104,7 +104,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>544</xloc>
+      <xloc>464</xloc>
       <yloc>32</yloc>
       <attributes_hac/>
     </action>
@@ -130,8 +130,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>736</xloc>
-      <yloc>48</yloc>
+      <xloc>672</xloc>
+      <yloc>32</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -156,8 +156,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>416</xloc>
-      <yloc>144</yloc>
+      <xloc>352</xloc>
+      <yloc>160</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -182,8 +182,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>624</xloc>
-      <yloc>144</yloc>
+      <xloc>544</xloc>
+      <yloc>160</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -208,8 +208,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>944</xloc>
-      <yloc>48</yloc>
+      <xloc>896</xloc>
+      <yloc>32</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -234,8 +234,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>960</xloc>
-      <yloc>320</yloc>
+      <xloc>896</xloc>
+      <yloc>304</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -260,7 +260,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>832</xloc>
+      <xloc>768</xloc>
       <yloc>160</yloc>
       <attributes_hac/>
     </action>
@@ -286,8 +286,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1104</xloc>
-      <yloc>192</yloc>
+      <xloc>1008</xloc>
+      <yloc>160</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -312,8 +312,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>720</xloc>
-      <yloc>336</yloc>
+      <xloc>608</xloc>
+      <yloc>304</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -338,8 +338,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>832</xloc>
-      <yloc>224</yloc>
+      <xloc>752</xloc>
+      <yloc>448</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -364,7 +364,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>496</xloc>
+      <xloc>400</xloc>
       <yloc>320</yloc>
       <attributes_hac/>
     </action>
@@ -416,8 +416,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>368</xloc>
-      <yloc>208</yloc>
+      <xloc>304</xloc>
+      <yloc>464</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -442,8 +442,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>640</xloc>
-      <yloc>208</yloc>
+      <xloc>496</xloc>
+      <yloc>448</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -468,8 +468,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>288</xloc>
-      <yloc>464</yloc>
+      <xloc>112</xloc>
+      <yloc>480</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -494,8 +494,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>480</xloc>
-      <yloc>400</yloc>
+      <xloc>192</xloc>
+      <yloc>624</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -520,8 +520,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>736</xloc>
-      <yloc>416</yloc>
+      <xloc>576</xloc>
+      <yloc>624</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -546,8 +546,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>608</xloc>
-      <yloc>496</yloc>
+      <xloc>384</xloc>
+      <yloc>624</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -572,8 +572,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>880</xloc>
-      <yloc>496</yloc>
+      <xloc>784</xloc>
+      <yloc>624</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -598,8 +598,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1024</xloc>
-      <yloc>416</yloc>
+      <xloc>960</xloc>
+      <yloc>624</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -624,7 +624,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1024</xloc>
+      <xloc>1168</xloc>
       <yloc>624</yloc>
       <attributes_hac/>
     </action>
@@ -650,8 +650,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>608</xloc>
-      <yloc>608</yloc>
+      <xloc>784</xloc>
+      <yloc>752</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -676,8 +676,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>752</xloc>
-      <yloc>512</yloc>
+      <xloc>960</xloc>
+      <yloc>752</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -702,8 +702,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>480</xloc>
-      <yloc>512</yloc>
+      <xloc>576</xloc>
+      <yloc>752</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -728,8 +728,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>320</xloc>
-      <yloc>592</yloc>
+      <xloc>384</xloc>
+      <yloc>752</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -754,8 +754,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>880</xloc>
-      <yloc>592</yloc>
+      <xloc>1168</xloc>
+      <yloc>752</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -776,8 +776,8 @@ update event_organization set is_new = false;</sql>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>128</xloc>
-      <yloc>256</yloc>
+      <xloc>112</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -802,8 +802,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>320</xloc>
-      <yloc>736</yloc>
+      <xloc>192</xloc>
+      <yloc>752</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -828,8 +828,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>496</xloc>
-      <yloc>736</yloc>
+      <xloc>192</xloc>
+      <yloc>896</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -854,8 +854,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>736</yloc>
+      <xloc>384</xloc>
+      <yloc>896</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -880,8 +880,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>896</xloc>
-      <yloc>736</yloc>
+      <xloc>576</xloc>
+      <yloc>896</yloc>
       <attributes_hac/>
     </action>
   </actions>

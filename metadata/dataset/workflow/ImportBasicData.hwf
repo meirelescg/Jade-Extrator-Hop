@@ -26,8 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>352</xloc>
-      <yloc>0</yloc>
+      <xloc>192</xloc>
+      <yloc>64</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -54,7 +54,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>352</xloc>
+      <xloc>672</xloc>
       <yloc>64</yloc>
       <attributes_hac/>
     </action>
@@ -80,7 +80,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>528</xloc>
+      <xloc>848</xloc>
       <yloc>192</yloc>
       <attributes_hac/>
     </action>
@@ -106,7 +106,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>352</xloc>
+      <xloc>672</xloc>
       <yloc>192</yloc>
       <attributes_hac/>
     </action>
@@ -132,7 +132,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>192</xloc>
+      <xloc>512</xloc>
       <yloc>64</yloc>
       <attributes_hac/>
     </action>
@@ -158,7 +158,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>192</xloc>
+      <xloc>512</xloc>
       <yloc>192</yloc>
       <attributes_hac/>
     </action>
@@ -184,19 +184,38 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>528</xloc>
+      <xloc>848</xloc>
+      <yloc>64</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportCountry.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportCountry.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>352</xloc>
       <yloc>64</yloc>
       <attributes_hac/>
     </action>
   </actions>
   <hops>
-    <hop>
-      <from>Start</from>
-      <to>ReadXML.hpl </to>
-      <enabled>N</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
     <hop>
       <from>ReadXML.hpl </from>
       <to>ImportCity.hpl</to>
@@ -207,7 +226,7 @@
     <hop>
       <from>ImportPeriodicalMagazine.hpl</from>
       <to>ImportQualis.hpl</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -226,15 +245,22 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
+      <from>ReadXML.hpl 2</from>
+      <to>ImportPeriodicalMagazine.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
       <from>Start</from>
-      <to>Adm_ImportInstitution.hpl</to>
+      <to>ImportCountry.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>ReadXML.hpl 2</from>
-      <to>ImportPeriodicalMagazine.hpl</to>
+      <from>ImportCountry.hpl</from>
+      <to>ReadXML.hpl </to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

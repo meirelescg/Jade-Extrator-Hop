@@ -204,7 +204,7 @@
     <hop>
       <from>Get file names</from>
       <to>Read XML Researcher</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>format date and select fields to input </from>
@@ -219,7 +219,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML Researcher</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
@@ -472,6 +472,7 @@
       </field>
     </group>
     <ignore_aggregate>N</ignore_aggregate>
+    <linenr_fieldname/>
     <prefix>grp</prefix>
     <attributes/>
     <GUI>

@@ -26,7 +26,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>0</xloc>
+      <xloc>48</xloc>
       <yloc>240</yloc>
       <attributes_hac/>
     </action>
@@ -52,8 +52,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>656</xloc>
-      <yloc>240</yloc>
+      <xloc>528</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -78,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>688</xloc>
-      <yloc>32</yloc>
+      <xloc>384</xloc>
+      <yloc>384</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -106,60 +106,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>288</xloc>
-      <yloc>112</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ReadXML.hpl 2</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
       <xloc>432</xloc>
-      <yloc>64</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ImportProfessionalExperience.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>Y</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportProfessionalExperience.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>512</xloc>
-      <yloc>304</yloc>
+      <yloc>80</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -184,8 +132,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>192</xloc>
-      <yloc>272</yloc>
+      <xloc>288</xloc>
+      <yloc>240</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -210,8 +158,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>864</xloc>
-      <yloc>112</yloc>
+      <xloc>128</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -236,8 +184,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>944</xloc>
-      <yloc>224</yloc>
+      <xloc>0</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -262,8 +210,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1008</xloc>
-      <yloc>48</yloc>
+      <xloc>112</xloc>
+      <yloc>752</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -288,8 +236,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1120</xloc>
-      <yloc>288</yloc>
+      <xloc>208</xloc>
+      <yloc>912</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -303,8 +251,8 @@
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>784</xloc>
-      <yloc>304</yloc>
+      <xloc>240</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -318,23 +266,8 @@
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>560</xloc>
-      <yloc>128</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>delete from professional_experience</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <connection>Simcc_DB</connection>
-      <sendOneStatement>N</sendOneStatement>
-      <sql>delete from professional_experience;</sql>
-      <sqlfromfile>N</sqlfromfile>
-      <useVariableSubstitution>N</useVariableSubstitution>
-      <parallel>N</parallel>
-      <xloc>368</xloc>
-      <yloc>240</yloc>
+      <xloc>672</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -348,8 +281,8 @@
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>160</xloc>
-      <yloc>64</yloc>
+      <xloc>192</xloc>
+      <yloc>80</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -357,13 +290,6 @@
     <hop>
       <from>ReadXML.hpl 3</from>
       <to>ImportAddressResearcher.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ReadXML.hpl 2</from>
-      <to>ImportProfessionalExperience.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
@@ -411,29 +337,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportProfessionalExperience.hpl</from>
-      <to>delete from researcher_address</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>delete from researcher_address</from>
       <to>ReadXML.hpl 3</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportResearcher.hpl</from>
-      <to>delete from professional_experience</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>delete from professional_experience</from>
-      <to>ReadXML.hpl 2</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
@@ -448,6 +353,13 @@
     <hop>
       <from>reset update_abstract</from>
       <to>ReadXML.hpl </to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportResearcher.hpl</from>
+      <to>delete from researcher_address</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

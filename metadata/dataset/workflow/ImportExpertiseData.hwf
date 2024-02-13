@@ -208,8 +208,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>944</xloc>
-      <yloc>192</yloc>
+      <xloc>960</xloc>
+      <yloc>160</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -234,7 +234,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1040</xloc>
+      <xloc>1088</xloc>
       <yloc>64</yloc>
       <attributes_hac/>
     </action>
