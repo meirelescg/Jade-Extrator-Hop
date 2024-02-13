@@ -125,6 +125,7 @@
         <condition>=</condition>
         <field>issn</field>
         <name>ISSN</name>
+        <name2/>
       </key>
       <schema>"public"</schema>
       <table>periodical_magazine</table>
@@ -135,7 +136,7 @@
       </value>
       <value>
         <name>name</name>
-        <rename>Titulo</rename>
+        <rename>Título</rename>
         <update>Y</update>
       </value>
       <value>
@@ -164,32 +165,6 @@
     </partitioning>
     <fields>
       <field>
-        <in_stream_name>Titulo</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>lower</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>yes</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>Area de Avaliacao</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>lower</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>yes</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
         <in_stream_name>ISSN</in_stream_name>
         <out_stream_name/>
         <trim_type>none</trim_type>
@@ -201,6 +176,45 @@
         <mask_xml>none</mask_xml>
         <digits>digits_only</digits>
         <remove_special_characters>tab</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Título</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>lower</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Area de Avaliação</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>lower</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Estrato</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
       </field>
     </fields>
     <attributes/>
