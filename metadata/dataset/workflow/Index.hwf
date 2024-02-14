@@ -127,18 +127,18 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>ImportProfnit.hpl</name>
+      <name>ImportGraduation.hwf</name>
       <description/>
-      <type>PIPELINE</type>
+      <type>WORKFLOW</type>
       <attributes/>
       <add_date>N</add_date>
       <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportProfnit.hpl</filename>
-      <loglevel>Basic</loglevel>
+      <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportGraduation.hwf</filename>
+      <logext/>
+      <logfile/>
+      <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
@@ -149,7 +149,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>192</xloc>
-      <yloc>352</yloc>
+      <yloc>368</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -169,13 +169,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportProductionData.hwf</from>
-      <to>ImportProfnit.hpl</to>
-      <enabled>N</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Start</from>
       <to>ImportBasicData.hwf</to>
       <enabled>Y</enabled>
@@ -185,6 +178,13 @@
     <hop>
       <from>ImportBasicData.hwf</from>
       <to>ImportExpertiseData.hwf</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportProductionData.hwf</from>
+      <to>ImportGraduation.hwf</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
