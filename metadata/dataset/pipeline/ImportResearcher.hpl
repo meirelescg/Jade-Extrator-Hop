@@ -139,7 +139,7 @@
     <hop>
       <from>Select values</from>
       <to>Update</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Get rows files xml</from>
@@ -944,11 +944,9 @@
     <fields>
       <field>
         <name>city_id</name>
-        <rename/>
       </field>
       <field>
         <name>country_id</name>
-        <rename/>
       </field>
       <field>
         <name>NOME</name>
@@ -1553,7 +1551,7 @@ FROM "public".researcher
     <attributes/>
     <GUI>
       <xloc>976</xloc>
-      <yloc>160</yloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

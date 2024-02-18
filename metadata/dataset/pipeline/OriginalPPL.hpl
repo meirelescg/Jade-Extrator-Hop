@@ -250,7 +250,7 @@
     <attributes/>
     <GUI>
       <xloc>992</xloc>
-      <yloc>432</yloc>
+      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform>
@@ -352,7 +352,7 @@
     <attributes/>
     <GUI>
       <xloc>992</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -533,7 +533,7 @@
     <attributes/>
     <GUI>
       <xloc>1376</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1516,7 +1516,7 @@
     <attributes/>
     <GUI>
       <xloc>1152</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1757,7 +1757,7 @@ FROM "public".city
     <attributes/>
     <GUI>
       <xloc>2080</xloc>
-      <yloc>448</yloc>
+      <yloc>432</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1930,7 +1930,7 @@ FROM "public".researcher
     <attributes/>
     <GUI>
       <xloc>1856</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1992,7 +1992,7 @@ FROM "public".researcher
     <attributes/>
     <GUI>
       <xloc>1712</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -2207,7 +2207,7 @@ FROM "public".researcher
     <attributes/>
     <GUI>
       <xloc>2080</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
@@ -2235,7 +2235,7 @@ FROM "public".researcher
     <attributes/>
     <GUI>
       <xloc>1552</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
     </GUI>
   </transform>
   <transform>
