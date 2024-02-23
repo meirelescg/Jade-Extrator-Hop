@@ -134,7 +134,7 @@
     <hop>
       <from>Get file names</from>
       <to>Read XML Researcher</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Select values</from>
@@ -144,7 +144,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML Researcher</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Select values 2</from>
