@@ -26,7 +26,7 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>192</xloc>
+      <xloc>320</xloc>
       <yloc>96</yloc>
       <attributes_hac/>
     </action>
@@ -50,7 +50,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>336</xloc>
+      <xloc>448</xloc>
       <yloc>0</yloc>
       <attributes_hac/>
     </action>
@@ -74,8 +74,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>464</xloc>
-      <yloc>96</yloc>
+      <xloc>576</xloc>
+      <yloc>112</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -98,8 +98,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>464</xloc>
-      <yloc>224</yloc>
+      <xloc>576</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -122,38 +122,19 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>192</xloc>
-      <yloc>224</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ImportGraduation.hwf</name>
-      <description/>
-      <type>WORKFLOW</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportGraduation.hwf</filename>
-      <logext/>
-      <logfile/>
-      <loglevel>Nothing</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>192</xloc>
-      <yloc>368</yloc>
+      <xloc>320</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
   </actions>
   <hops>
+    <hop>
+      <from>ImportBasicData.hwf</from>
+      <to>ImportExpertiseData.hwf</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
     <hop>
       <from>ImportExpertiseData.hwf</from>
       <to>ImportResearcherData.hwf</to>
@@ -174,20 +155,6 @@
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>ImportBasicData.hwf</from>
-      <to>ImportExpertiseData.hwf</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ImportProductionData.hwf</from>
-      <to>ImportGraduation.hwf</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>

@@ -86,52 +86,11 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get file names 2</from>
-      <to>Read XML graduation</to>
+      <from>Read XML graduation teste</from>
+      <to>Select values</to>
       <enabled>N</enabled>
     </hop>
   </order>
-  <transform>
-    <name>Get file names 2</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>/home/lilith/repository/hop/config/projects/Jade-Extrator-Hop/metadata/dataset/xml</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>192</xloc>
-      <yloc>112</yloc>
-    </GUI>
-  </transform>
   <transform>
     <name>Get rows files xml</name>
     <type>RowsFromResult</type>
@@ -180,7 +139,7 @@
     <attributes/>
     <GUI>
       <xloc>1024</xloc>
-      <yloc>96</yloc>
+      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform>
@@ -385,6 +344,149 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </GUI>
   </transform>
   <transform>
+    <name>Read XML graduation teste</name>
+    <type>getXMLData</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <namespaceaware>N</namespaceaware>
+    <ignorecomments>N</ignorecomments>
+    <readurl>N</readurl>
+    <validating>N</validating>
+    <usetoken>N</usetoken>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <rownum_field/>
+    <encoding>UTF-8</encoding>
+    <file>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/Teste/88185575568.xml</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>GRADUACAO</name>
+        <xpath>GRADUACAO/@STATUS-DO-CURSO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ESPECIALIZACAO</name>
+        <xpath>ESPECIALIZACAO/@STATUS-DO-CURSO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>MESTRADO</name>
+        <xpath>MESTRADO/@STATUS-DO-CURSO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>DOUTORADO</name>
+        <xpath>DOUTORADO/@STATUS-DO-CURSO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>POSDOUTORADO</name>
+        <xpath>POS-DOUTORADO/@STATUS-DO-CURSO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>NOME-COMPLETO</name>
+        <xpath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <loopxpath>/CURRICULO-VITAE/DADOS-GERAIS/FORMACAO-ACADEMICA-TITULACAO</loopxpath>
+    <IsInFields>N</IsInFields>
+    <IsAFile>N</IsAFile>
+    <XmlField/>
+    <prunePath/>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>400</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Select MaiorTitulaçao</name>
     <type>SelectValues</type>
     <description/>
@@ -498,8 +600,8 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1296</xloc>
-      <yloc>96</yloc>
+      <xloc>1248</xloc>
+      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform>
@@ -598,8 +700,8 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>96</yloc>
+      <xloc>1136</xloc>
+      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform>
@@ -690,8 +792,8 @@ FROM "public".researcher
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>96</yloc>
+      <xloc>1408</xloc>
+      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

@@ -26,8 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>50</xloc>
-      <yloc>50</yloc>
+      <xloc>48</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -52,8 +52,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>576</xloc>
-      <yloc>48</yloc>
+      <xloc>768</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -78,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>832</xloc>
-      <yloc>48</yloc>
+      <xloc>1168</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -104,8 +104,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>672</xloc>
-      <yloc>160</yloc>
+      <xloc>960</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -130,8 +130,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>176</xloc>
-      <yloc>144</yloc>
+      <xloc>192</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -156,8 +156,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>320</xloc>
-      <yloc>64</yloc>
+      <xloc>384</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -182,8 +182,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>416</xloc>
-      <yloc>160</yloc>
+      <xloc>576</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -208,8 +208,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>960</xloc>
-      <yloc>160</yloc>
+      <xloc>1168</xloc>
+      <yloc>304</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -234,8 +234,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1088</xloc>
-      <yloc>64</yloc>
+      <xloc>960</xloc>
+      <yloc>304</yloc>
       <attributes_hac/>
     </action>
   </actions>

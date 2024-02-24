@@ -58,7 +58,7 @@
     <fields>
       <field>
         <name>rank</name>
-        <type>Integer</type>
+        <type>String</type>
         <format>#</format>
         <currency>$</currency>
         <decimal>.</decimal>
@@ -80,7 +80,7 @@
       </field>
       <field>
         <name>jcrYear</name>
-        <type>Integer</type>
+        <type>String</type>
         <format>#</format>
         <currency>$</currency>
         <decimal>.</decimal>
@@ -124,7 +124,7 @@
       </field>
       <field>
         <name>totalCites</name>
-        <type>Integer</type>
+        <type>String</type>
         <format>#</format>
         <currency>$</currency>
         <decimal>.</decimal>
@@ -135,7 +135,7 @@
       </field>
       <field>
         <name>totalArticles</name>
-        <type>Integer</type>
+        <type>String</type>
         <format>#</format>
         <currency>$</currency>
         <decimal>.</decimal>
@@ -146,7 +146,7 @@
       </field>
       <field>
         <name>citableItems</name>
-        <type>Integer</type>
+        <type>String</type>
         <format>#</format>
         <currency>$</currency>
         <decimal>.</decimal>
@@ -157,7 +157,7 @@
       </field>
       <field>
         <name>citedHalfLife</name>
-        <type>Number</type>
+        <type>String</type>
         <format>#.#</format>
         <currency>$</currency>
         <decimal>.</decimal>
@@ -168,7 +168,7 @@
       </field>
       <field>
         <name>citingHalfLife</name>
-        <type>Number</type>
+        <type>String</type>
         <format>#.#</format>
         <currency>$</currency>
         <decimal>.</decimal>
@@ -179,7 +179,7 @@
       </field>
       <field>
         <name>jif2019</name>
-        <type>Number</type>
+        <type>String</type>
         <format>#.#</format>
         <currency>$</currency>
         <decimal>.</decimal>
@@ -220,55 +220,42 @@
     <fields>
       <field>
         <name>rank</name>
-        <rename/>
       </field>
       <field>
         <name>journalName</name>
-        <rename/>
       </field>
       <field>
         <name>jcrYear</name>
-        <rename/>
       </field>
       <field>
         <name>abbrJournal</name>
-        <rename/>
       </field>
       <field>
         <name>issn</name>
-        <rename/>
       </field>
       <field>
         <name>eissn</name>
-        <rename/>
       </field>
       <field>
         <name>totalCites</name>
-        <rename/>
       </field>
       <field>
         <name>totalArticles</name>
-        <rename/>
       </field>
       <field>
         <name>citableItems</name>
-        <rename/>
       </field>
       <field>
         <name>citedHalfLife</name>
-        <rename/>
       </field>
       <field>
         <name>citingHalfLife</name>
-        <rename/>
       </field>
       <field>
         <name>jif2019</name>
-        <rename/>
       </field>
       <field>
         <name>url_revista</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -355,7 +342,7 @@
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
-    <table>jcr_novo_link_v1</table>
+    <table>jcr</table>
     <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>

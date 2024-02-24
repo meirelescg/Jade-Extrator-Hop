@@ -22,179 +22,179 @@
   </notepads>
   <order>
     <hop>
-      <from>Sort City</from>
-      <to>Merge join City</to>
+      <from>Get file names</from>
+      <to>Extração dos dados</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Get Curriculos</from>
+      <to>Extração dos dados</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table City</from>
-      <to>Select City</to>
+      <from>Pesquisadores Cadastrados</from>
+      <to>Renomeando</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Read XML Researcher</from>
-      <to>Select Campos XML</to>
+      <from>Extração dos dados</from>
+      <to>Limpando</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select City</from>
-      <to>Sort City</to>
+      <from>Renomeando</from>
+      <to>Sort Lattes SIMCC</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select researcher</from>
-      <to>Sort researcher </to>
+      <from>Limpando</from>
+      <to>Sort Lattes XML</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort researcher </from>
-      <to>Merge join researcher </to>
+      <from>Sort Lattes SIMCC</from>
+      <to>Join Lattes - 1</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table researcher </from>
-      <to>Select researcher</to>
+      <from>Sort Lattes XML</from>
+      <to>Join Lattes - 1</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows</from>
-      <to>Merge join researcher </to>
+      <from>Join Lattes - 1</from>
+      <to>Adicionar ou Atualizar</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Merge join researcher </from>
+      <from>Adicionar ou Atualizar</from>
+      <to>Limpando 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Cidades Cadastradas</from>
+      <to>Renomeando 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort Cidades XML</from>
+      <to>Join Cidades - 1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort Cidades SIMCC</from>
+      <to>Join Cidades - 1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando 2</from>
+      <to>Sort Cidades SIMCC</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Limpando 2</from>
+      <to>Normalizando</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Normalizando</from>
+      <to>Sort Cidades XML</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Join Cidades - 1</from>
+      <to>Sort Lattes XML 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Dados Administrativo</from>
+      <to>Renomeando 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando 3</from>
+      <to>Sort Lattes Adm</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort Lattes Adm</from>
+      <to>Join Lattes - 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort Lattes XML 2</from>
+      <to>Join Lattes - 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Join Lattes - 2</from>
+      <to>Limpando 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Limpando 3</from>
+      <to>Montando last_update</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Montando last_update</from>
+      <to>Limpando Orcid</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>String para Data</from>
+      <to>Renomeando 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Limpando Orcid</from>
+      <to>String para Data</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando 4</from>
+      <to>Table output</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Limpando Orcid 2</from>
+      <to>String para Data 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Montando last_update 2</from>
+      <to>Limpando Orcid 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>String para Data 2</from>
+      <to>Renomeando 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Adicionar ou Atualizar</from>
+      <to>Montando last_update 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando 5</from>
       <to>Filter rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Filter rows</from>
-      <to>Dummy (researcher já cadastrado)</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>String operations 3</from>
-      <to>Sort rows</to>
+      <to>Dummy (do nothing)</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Filter rows</from>
-      <to>Sort Researcher  by City</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort Researcher  by City</from>
-      <to>Merge join City</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select Campos XML</from>
-      <to>String operations 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Dummy (researcher já cadastrado)</from>
-      <to>Filter rows abstract</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows abstract</from>
-      <to>change </to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows abstract</from>
-      <to>there was no change</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>cut orcid 2</from>
-      <to>convert date to string  2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>join in date  and hours 2</from>
-      <to>cut orcid 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>change </from>
-      <to>join in date  and hours 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>convert date to string  2</from>
-      <to>Add constants</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Add constants</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get file names</from>
-      <to>Read XML Researcher</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Select values</from>
       <to>Update</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get rows files xml</from>
-      <to>Read XML Researcher</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 2</from>
-      <to>Sort Lattes -2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort Lattes -2</from>
-      <to>Join adm data</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort Lattes -  1</from>
-      <to>Join adm data</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Table input</from>
-      <to>Select values 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Merge join City</from>
-      <to>Select values 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 3</from>
-      <to>Sort Lattes -  1</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>cut orcid</from>
-      <to>Select values 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Join adm data</from>
-      <to>cut orcid</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 4</from>
-      <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
-    <name>Add constants</name>
-    <type>Constant</type>
+    <name>Adicionar ou Atualizar</name>
+    <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -203,24 +203,71 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <length>-1</length>
-        <name>update_abstract</name>
-        <nullif>1</nullif>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-        <type>String</type>
-      </field>
-    </fields>
+    <compare>
+      <condition>
+        <conditions>
+</conditions>
+        <function>IS NOT NULL</function>
+        <leftvalue>researcher_id_simcc</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+      </condition>
+    </compare>
+    <send_false_to>Limpando 2</send_false_to>
+    <send_true_to>Montando last_update 2</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>1872</xloc>
-      <yloc>48</yloc>
+      <xloc>736</xloc>
+      <yloc>640</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Dummy (researcher já cadastrado)</name>
+    <name>Cidades Cadastradas</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Simcc_DB</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT id, name, country_id  FROM CITY
+</sql>
+    <variables_active>N</variables_active>
+    <attributes/>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>800</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Dados Administrativo</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>connect_adm</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT researcher_id, lattes_id, institution_id FROM researcher</sql>
+    <variables_active>N</variables_active>
+    <attributes/>
+    <GUI>
+      <xloc>1440</xloc>
+      <yloc>480</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Dummy (do nothing)</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -232,215 +279,12 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>48</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compare>
-      <condition>
-        <conditions>
-</conditions>
-        <function>IS NULL</function>
-        <leftvalue>researcher_name</leftvalue>
-        <negated>N</negated>
-        <operator>-</operator>
-      </condition>
-    </compare>
-    <send_false_to>Dummy (researcher já cadastrado)</send_false_to>
-    <send_true_to>Sort Researcher  by City</send_true_to>
-    <attributes/>
-    <GUI>
-      <xloc>624</xloc>
-      <yloc>176</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Filter rows abstract</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compare>
-      <condition>
-        <conditions>
-</conditions>
-        <function>&lt;></function>
-        <leftvalue>RESUMO</leftvalue>
-        <negated>N</negated>
-        <operator>-</operator>
-        <rightvalue>researcher_abstract</rightvalue>
-      </condition>
-    </compare>
-    <send_false_to>there was no change</send_false_to>
-    <send_true_to>change </send_true_to>
-    <attributes/>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>48</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Get file names</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>/home/lilith/repository/hop/config/projects/Jade-Extrator-SIMCC/metadata/dataset/xml/curriculos</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>224</xloc>
-      <yloc>624</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Get rows files xml</name>
-    <type>RowsFromResult</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>filename</name>
-        <type>None</type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>80</xloc>
-      <yloc>480</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Join adm data</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <keys_1>
-      <key>NUMERO-IDENTIFICADOR</key>
-    </keys_1>
-    <keys_2>
-      <key>lattes_id_db</key>
-    </keys_2>
-    <transform1>Sort Lattes -  1</transform1>
-    <transform2>Sort Lattes -2</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>1328</xloc>
-      <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Merge join City</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>RIGHT OUTER</join_type>
-    <keys_1>
-      <key>city_name</key>
-    </keys_1>
-    <keys_2>
-      <key>CIDADE-NASCIMENTO</key>
-    </keys_2>
-    <transform1>Sort City</transform1>
-    <transform2>Sort Researcher  by City</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Merge join researcher </name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>RIGHT OUTER</join_type>
-    <keys_1>
-      <key>researcher_name</key>
-    </keys_1>
-    <keys_2>
-      <key>NOME</key>
-    </keys_2>
-    <transform1>Sort researcher </transform1>
-    <transform2>Sort rows</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>624</xloc>
+      <xloc>1360</xloc>
       <yloc>272</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Read XML Researcher</name>
+    <name>Extração dos dados</name>
     <type>getXMLData</type>
     <description/>
     <distribute>N</distribute>
@@ -464,7 +308,7 @@
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/curriculos_xml/Teste/00131639579.xml</name>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/0066009093165609.xml</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -626,22 +470,7 @@
         <xpath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-INSTITUICAO-EMPRESA</name>
-        <xpath>ENDERECO/ENDERECO-PROFISSIONAL/@NOME-INSTITUICAO-EMPRESA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
+        <type>String</type>
         <format/>
         <currency/>
         <decimal/>
@@ -668,12 +497,178 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>480</yloc>
+      <xloc>160</xloc>
+      <yloc>688</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Select Campos XML</name>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compare>
+      <condition>
+        <conditions>
+</conditions>
+        <function>&lt;</function>
+        <leftvalue>last_update_simcc</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+        <rightvalue>last_update</rightvalue>
+      </condition>
+    </compare>
+    <send_false_to>Dummy (do nothing)</send_false_to>
+    <send_true_to>Update</send_true_to>
+    <attributes/>
+    <GUI>
+      <xloc>1360</xloc>
+      <yloc>384</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Get Curriculos</name>
+    <type>RowsFromResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>filename</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>0</xloc>
+      <yloc>688</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Get file names</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>800</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Join Cidades - 1</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>RIGHT OUTER</join_type>
+    <keys_1>
+      <key>city_name_simcc</key>
+    </keys_1>
+    <keys_2>
+      <key>CIDADE-NASCIMENTO</key>
+    </keys_2>
+    <transform1>Sort Cidades SIMCC</transform1>
+    <transform2>Sort Cidades XML</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>1152</xloc>
+      <yloc>720</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Join Lattes - 1</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>RIGHT OUTER</join_type>
+    <keys_1>
+      <key>lattes_id_simcc</key>
+    </keys_1>
+    <keys_2>
+      <key>NUMERO-IDENTIFICADOR</key>
+    </keys_2>
+    <transform1>Sort Lattes SIMCC</transform1>
+    <transform2>Sort Lattes XML</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>640</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Join Lattes - 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>RIGHT OUTER</join_type>
+    <keys_1>
+      <key>lattes_id_adm</key>
+    </keys_1>
+    <keys_2>
+      <key>NUMERO-IDENTIFICADOR</key>
+    </keys_2>
+    <transform1>Sort Lattes Adm</transform1>
+    <transform2>Sort Lattes XML 2</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>1440</xloc>
+      <yloc>720</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Limpando</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -717,22 +712,300 @@
       <field>
         <name>NUMERO-IDENTIFICADOR</name>
       </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>688</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Limpando 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
       <field>
-        <name>NOME-INSTITUICAO-EMPRESA</name>
+        <name>NOME</name>
+      </field>
+      <field>
+        <name>PAIS-DE-NACIONALIDADE</name>
+      </field>
+      <field>
+        <name>ORCID</name>
+      </field>
+      <field>
+        <name>CIDADE-NASCIMENTO</name>
+      </field>
+      <field>
+        <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+      </field>
+      <field>
+        <name>RESUMO</name>
+      </field>
+      <field>
+        <name>RESUMO-EN</name>
+      </field>
+      <field>
+        <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+      </field>
+      <field>
+        <name>DATA-ATUALIZACAO</name>
+      </field>
+      <field>
+        <name>HORA-ATUALIZACAO</name>
+      </field>
+      <field>
+        <name>NUMERO-IDENTIFICADOR</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>480</yloc>
+      <xloc>880</xloc>
+      <yloc>640</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Select City</name>
+    <name>Limpando 3</name>
     <type>SelectValues</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>researcher_id_adm</name>
+      </field>
+      <field>
+        <name>institution_id_adm</name>
+      </field>
+      <field>
+        <name>city_id_simcc</name>
+      </field>
+      <field>
+        <name>city_name_simcc</name>
+      </field>
+      <field>
+        <name>country_id_simcc</name>
+      </field>
+      <field>
+        <name>NOME</name>
+      </field>
+      <field>
+        <name>PAIS-DE-NACIONALIDADE</name>
+      </field>
+      <field>
+        <name>ORCID</name>
+      </field>
+      <field>
+        <name>CIDADE-NASCIMENTO</name>
+      </field>
+      <field>
+        <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+      </field>
+      <field>
+        <name>RESUMO</name>
+      </field>
+      <field>
+        <name>RESUMO-EN</name>
+      </field>
+      <field>
+        <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+      </field>
+      <field>
+        <name>DATA-ATUALIZACAO</name>
+      </field>
+      <field>
+        <name>HORA-ATUALIZACAO</name>
+      </field>
+      <field>
+        <name>NUMERO-IDENTIFICADOR</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1568</xloc>
+      <yloc>720</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Limpando Orcid</name>
+    <type>StringCut</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <cut_from>18</cut_from>
+        <cut_to>50</cut_to>
+        <in_stream_name>ORCID</in_stream_name>
+        <out_stream_name>orcid_cut</out_stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1824</xloc>
+      <yloc>720</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Limpando Orcid 2</name>
+    <type>StringCut</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <cut_from>18</cut_from>
+        <cut_to>50</cut_to>
+        <in_stream_name>ORCID</in_stream_name>
+        <out_stream_name>orcid_cut</out_stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>896</xloc>
+      <yloc>384</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Montando last_update</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <calculation>
+      <calc_type>ADD</calc_type>
+      <field_a>DATA-ATUALIZACAO</field_a>
+      <field_b>HORA-ATUALIZACAO</field_b>
+      <field_name>last_update</field_name>
+      <remove>N</remove>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <value_type>String</value_type>
+    </calculation>
+    <failIfNoFile>Y</failIfNoFile>
+    <attributes/>
+    <GUI>
+      <xloc>1696</xloc>
+      <yloc>720</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Montando last_update 2</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <calculation>
+      <calc_type>ADD</calc_type>
+      <field_a>DATA-ATUALIZACAO</field_a>
+      <field_b>HORA-ATUALIZACAO</field_b>
+      <field_name>last_update</field_name>
+      <remove>N</remove>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <value_type>String</value_type>
+    </calculation>
+    <failIfNoFile>Y</failIfNoFile>
+    <attributes/>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>384</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Normalizando</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>CIDADE-NASCIMENTO</in_stream_name>
+        <out_stream_name/>
+        <trim_type>none</trim_type>
+        <lower_upper>lower</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>576</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Pesquisadores Cadastrados</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Simcc_DB</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT id, lattes_id, last_update FROM researcher</sql>
+    <variables_active>N</variables_active>
+    <attributes/>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>576</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Renomeando</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -742,25 +1015,122 @@
     <fields>
       <field>
         <name>id</name>
-        <rename>city_id</rename>
+        <rename>researcher_id_simcc</rename>
+      </field>
+      <field>
+        <name>lattes_id</name>
+      </field>
+      <field>
+        <name>last_update</name>
+        <rename>last_update_simcc</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>lattes_id</name>
+        <rename>lattes_id_simcc</rename>
+        <type>String</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>576</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Renomeando 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>id</name>
+        <rename>city_id_simcc</rename>
       </field>
       <field>
         <name>name</name>
-        <rename>city_name</rename>
+        <rename>city_name_simcc</rename>
       </field>
       <field>
         <name>country_id</name>
+        <rename>country_id_simcc</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>768</xloc>
+      <xloc>880</xloc>
+      <yloc>800</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Renomeando 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>researcher_id</name>
+        <rename>researcher_id_adm</rename>
+      </field>
+      <field>
+        <name>lattes_id</name>
+      </field>
+      <field>
+        <name>institution_id</name>
+        <rename>institution_id_adm</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>lattes_id</name>
+        <rename>lattes_id_adm</rename>
+        <type>String</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1440</xloc>
       <yloc>560</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Select researcher</name>
+    <name>Renomeando 4</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -772,181 +1142,20 @@
     </partitioning>
     <fields>
       <field>
-        <name>id</name>
-        <rename>researcher _id</rename>
+        <name>researcher_id_adm</name>
+        <rename>id</rename>
       </field>
       <field>
-        <name>name</name>
-        <rename>researcher_name</rename>
+        <name>institution_id_adm</name>
+        <rename>institution_id</rename>
       </field>
       <field>
-        <name>lattes_id</name>
+        <name>city_id_simcc</name>
+        <rename>city_id</rename>
       </field>
       <field>
-        <name>abstract</name>
-        <rename>researcher_abstract</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>272</xloc>
-      <yloc>272</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
-        <rename>citations</rename>
-      </field>
-      <field>
-        <name>RESUMO</name>
-        <rename> abstract</rename>
-      </field>
-      <field>
-        <name>RESUMO-EN</name>
-        <rename>abstract_en</rename>
-      </field>
-      <field>
-        <name>OUTRAS-INFORMACOES-RELEVANTES</name>
-        <rename> other_information</rename>
-      </field>
-      <field>
-        <name>last_update</name>
-      </field>
-      <field>
-        <name>researcher _id</name>
-      </field>
-      <field>
-        <name>update_abstract</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>2032</xloc>
-      <yloc>48</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Select values 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>institution_id</name>
-        <rename>Institution_id_db</rename>
-      </field>
-      <field>
-        <name>researcher_id</name>
-        <rename>researcher_id_db</rename>
-      </field>
-      <field>
-        <name>lattes_id</name>
-        <rename>lattes_id_db</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>1488</xloc>
-      <yloc>192</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Select values 3</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>city_id</name>
-      </field>
-      <field>
-        <name>country_id</name>
-      </field>
-      <field>
-        <name>NOME</name>
-      </field>
-      <field>
-        <name>PAIS-DE-NACIONALIDADE</name>
-      </field>
-      <field>
-        <name>ORCID</name>
-      </field>
-      <field>
-        <name>CIDADE-NASCIMENTO</name>
-      </field>
-      <field>
-        <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
-      </field>
-      <field>
-        <name>RESUMO</name>
-      </field>
-      <field>
-        <name>RESUMO-EN</name>
-      </field>
-      <field>
-        <name>OUTRAS-INFORMACOES-RELEVANTES</name>
-      </field>
-      <field>
-        <name>DATA-ATUALIZACAO</name>
-      </field>
-      <field>
-        <name>HORA-ATUALIZACAO</name>
-      </field>
-      <field>
-        <name>NUMERO-IDENTIFICADOR</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>960</xloc>
-      <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Select values 4</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>city_id</name>
-      </field>
-      <field>
-        <name>country_id</name>
+        <name>country_id_simcc</name>
+        <rename>country_id</rename>
       </field>
       <field>
         <name>NOME</name>
@@ -969,34 +1178,117 @@
         <rename>other_information</rename>
       </field>
       <field>
-        <name>Institution_id_db</name>
-        <rename>institution_id</rename>
-      </field>
-      <field>
-        <name>researcher_id_db</name>
-        <rename>id</rename>
-      </field>
-      <field>
-        <name>lattes_id_db</name>
+        <name>NUMERO-IDENTIFICADOR</name>
         <rename>lattes_id</rename>
       </field>
       <field>
-        <name>orcid-cut</name>
+        <name>last_update</name>
+      </field>
+      <field>
+        <name>orcid_cut</name>
         <rename>orcid</rename>
       </field>
       <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>last_update</name>
+        <rename>last_update</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1456</xloc>
-      <yloc>416</yloc>
+      <xloc>2080</xloc>
+      <yloc>720</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Sort City</name>
+    <name>Renomeando 5</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>researcher_id_simcc</name>
+        <rename>id</rename>
+      </field>
+      <field>
+        <name>last_update_simcc</name>
+      </field>
+      <field>
+        <name>NOME</name>
+        <rename>name</rename>
+      </field>
+      <field>
+        <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+        <rename>citations</rename>
+      </field>
+      <field>
+        <name>RESUMO</name>
+        <rename>abstract</rename>
+      </field>
+      <field>
+        <name>RESUMO-EN</name>
+        <rename>abstract_en</rename>
+      </field>
+      <field>
+        <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+        <rename>other_information</rename>
+      </field>
+      <field>
+        <name>last_update</name>
+      </field>
+      <field>
+        <name>orcid_cut</name>
+        <rename>orcid</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>last_update</name>
+        <rename>last_update</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1216</xloc>
+      <yloc>384</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Sort Cidades SIMCC</name>
     <type>SortRows</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -1012,7 +1304,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>city_name</name>
+        <name>city_name_simcc</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1022,80 +1314,12 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>768</xloc>
-      <yloc>448</yloc>
+      <xloc>1024</xloc>
+      <yloc>800</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Sort Lattes -  1</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>100</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>NUMERO-IDENTIFICADOR</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>1136</xloc>
-      <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Sort Lattes -2</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>lattes_id_db</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>1328</xloc>
-      <yloc>192</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Sort Researcher  by City</name>
+    <name>Sort Cidades XML</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -1124,12 +1348,12 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>768</xloc>
-      <yloc>176</yloc>
+      <xloc>1024</xloc>
+      <yloc>640</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Sort researcher </name>
+    <name>Sort Lattes Adm</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -1148,7 +1372,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>researcher_name</name>
+        <name>lattes_id_adm</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1158,12 +1382,12 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>272</yloc>
+      <xloc>1440</xloc>
+      <yloc>640</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Sort rows</name>
+    <name>Sort Lattes SIMCC</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -1182,7 +1406,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>NOME</name>
+        <name>lattes_id_simcc</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1192,13 +1416,13 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>384</yloc>
+      <xloc>448</xloc>
+      <yloc>576</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>String operations 3</name>
-    <type>StringOperations</type>
+    <name>Sort Lattes XML</name>
+    <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1207,61 +1431,32 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <directory>${java.io.tmpdir}</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <in_stream_name>NOME</in_stream_name>
-        <out_stream_name/>
-        <trim_type>none</trim_type>
-        <lower_upper>lower</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>yes</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
+        <name>NUMERO-IDENTIFICADOR</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
       </field>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>480</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Table City</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>Simcc_DB</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT
-  id
-, "name"
-, country_id
-, state_id
-, created_at
-, updated_at
-, deleted_at
-FROM "public".city
-</sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>768</xloc>
+      <xloc>448</xloc>
       <yloc>688</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Table input</name>
-    <type>TableInput</type>
+    <name>Sort Lattes XML 2</name>
+    <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1270,160 +1465,31 @@ FROM "public".city
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Adm_DB</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT
-	i.institution_id,
-	r.researcher_id,
-	r.lattes_id
-FROM
-	researcher r
-JOIN 
-	institution i ON r.institution_id = i.institution_id</sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>1632</xloc>
-      <yloc>192</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Table output</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <commit>1000</commit>
-    <connection>Simcc_DB</connection>
+    <directory>${java.io.tmpdir}</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
-</fields>
-    <ignore_errors>N</ignore_errors>
-    <only_when_have_rows>N</only_when_have_rows>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <return_keys>N</return_keys>
-    <schema>"public"</schema>
-    <specify_fields>N</specify_fields>
-    <table>researcher</table>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_in_table>Y</tablename_in_table>
-    <truncate>N</truncate>
-    <use_batch>Y</use_batch>
+      <field>
+        <name>NUMERO-IDENTIFICADOR</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
     <attributes/>
     <GUI>
-      <xloc>1584</xloc>
-      <yloc>416</yloc>
+      <xloc>1296</xloc>
+      <yloc>720</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Table researcher </name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>Simcc_DB</connection>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT
-  id
-, "name"
-, lattes_id
-,"abstract"
-FROM "public".researcher
-</sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>128</xloc>
-      <yloc>272</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Update</name>
-    <type>Update</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <commit>100</commit>
-    <connection>Simcc_DB</connection>
-    <error_ignored>N</error_ignored>
-    <lookup>
-      <key>
-        <condition>=</condition>
-        <field>id</field>
-        <name>researcher _id</name>
-      </key>
-      <schema>"public"</schema>
-      <table>researcher</table>
-      <value>
-        <name>citations</name>
-        <rename>citations</rename>
-      </value>
-      <value>
-        <name>abstract</name>
-        <rename> abstract</rename>
-      </value>
-      <value>
-        <name>abstract_en</name>
-        <rename>abstract_en</rename>
-      </value>
-      <value>
-        <name>other_information</name>
-        <rename> other_information</rename>
-      </value>
-      <value>
-        <name>last_update</name>
-        <rename>last_update</rename>
-      </value>
-      <value>
-        <name>update_abstract</name>
-        <rename>update_abstract</rename>
-      </value>
-    </lookup>
-    <skip_lookup>N</skip_lookup>
-    <use_batch>N</use_batch>
-    <attributes/>
-    <GUI>
-      <xloc>2176</xloc>
-      <yloc>48</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>change </name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <GUI>
-      <xloc>1200</xloc>
-      <yloc>48</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>convert date to string  2</name>
+    <name>String para Data</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -1455,13 +1521,13 @@ FROM "public".researcher
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1728</xloc>
-      <yloc>48</yloc>
+      <xloc>1952</xloc>
+      <yloc>720</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>cut orcid</name>
-    <type>StringCut</type>
+    <name>String para Data 2</name>
+    <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1471,22 +1537,34 @@ FROM "public".researcher
       <schema_name/>
     </partitioning>
     <fields>
-      <field>
-        <cut_from>18</cut_from>
-        <cut_to>50</cut_to>
-        <in_stream_name>ORCID</in_stream_name>
-        <out_stream_name>orcid-cut</out_stream_name>
-      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>last_update</name>
+        <rename>last_update</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>ddMMyyyyHHmmss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>416</yloc>
+      <xloc>1056</xloc>
+      <yloc>384</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>cut orcid 2</name>
-    <type>StringCut</type>
+    <name>Table output</name>
+    <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1495,23 +1573,80 @@ FROM "public".researcher
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <commit>1000</commit>
+    <connection>Simcc_DB</connection>
     <fields>
       <field>
-        <cut_from>18</cut_from>
-        <cut_to>50</cut_to>
-        <in_stream_name>ORCID</in_stream_name>
-        <out_stream_name>orcid-cut</out_stream_name>
+        <column_name>id</column_name>
+        <stream_name>id</stream_name>
+      </field>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>name</stream_name>
+      </field>
+      <field>
+        <column_name>lattes_id</column_name>
+        <stream_name>lattes_id</stream_name>
+      </field>
+      <field>
+        <column_name>institution_id</column_name>
+        <stream_name>institution_id</stream_name>
+      </field>
+      <field>
+        <column_name>last_update</column_name>
+        <stream_name>last_update</stream_name>
+      </field>
+      <field>
+        <column_name>citations</column_name>
+        <stream_name>citations</stream_name>
+      </field>
+      <field>
+        <column_name>orcid</column_name>
+        <stream_name>orcid</stream_name>
+      </field>
+      <field>
+        <column_name>abstract</column_name>
+        <stream_name>abstract</stream_name>
+      </field>
+      <field>
+        <column_name>abstract_en</column_name>
+        <stream_name>abstract_en</stream_name>
+      </field>
+      <field>
+        <column_name>other_information</column_name>
+        <stream_name>other_information</stream_name>
+      </field>
+      <field>
+        <column_name>city_id</column_name>
+        <stream_name>city_id</stream_name>
+      </field>
+      <field>
+        <column_name>country_id</column_name>
+        <stream_name>country_id</stream_name>
       </field>
     </fields>
+    <ignore_errors>N</ignore_errors>
+    <only_when_have_rows>N</only_when_have_rows>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <return_keys>N</return_keys>
+    <schema>"public"</schema>
+    <specify_fields>Y</specify_fields>
+    <table>researcher</table>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_in_table>Y</tablename_in_table>
+    <truncate>N</truncate>
+    <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1552</xloc>
-      <yloc>48</yloc>
+      <xloc>2240</xloc>
+      <yloc>720</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>join in date  and hours 2</name>
-    <type>Calculator</type>
+    <name>Update</name>
+    <type>Update</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1520,38 +1655,56 @@ FROM "public".researcher
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <calculation>
-      <calc_type>ADD</calc_type>
-      <field_a>DATA-ATUALIZACAO</field_a>
-      <field_b>HORA-ATUALIZACAO</field_b>
-      <field_name>last_update</field_name>
-      <remove>N</remove>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <value_type>String</value_type>
-    </calculation>
-    <failIfNoFile>Y</failIfNoFile>
+    <commit>100</commit>
+    <connection>Simcc_DB</connection>
+    <error_ignored>N</error_ignored>
+    <lookup>
+      <key>
+        <condition>=</condition>
+        <field>id</field>
+        <name>id</name>
+      </key>
+      <schema>"public"</schema>
+      <table>researcher</table>
+      <value>
+        <name>id</name>
+        <rename>id</rename>
+      </value>
+      <value>
+        <name>name</name>
+        <rename>name</rename>
+      </value>
+      <value>
+        <name>citations</name>
+        <rename>citations</rename>
+      </value>
+      <value>
+        <name>abstract</name>
+        <rename>abstract</rename>
+      </value>
+      <value>
+        <name>abstract_en</name>
+        <rename>abstract_en</rename>
+      </value>
+      <value>
+        <name>other_information</name>
+        <rename>other_information</rename>
+      </value>
+      <value>
+        <name>last_update</name>
+        <rename>last_update</rename>
+      </value>
+      <value>
+        <name>orcid</name>
+        <rename>orcid</rename>
+      </value>
+    </lookup>
+    <skip_lookup>N</skip_lookup>
+    <use_batch>N</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1376</xloc>
-      <yloc>48</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>there was no change</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>176</yloc>
+      <xloc>1536</xloc>
+      <yloc>384</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
