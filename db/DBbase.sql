@@ -396,7 +396,7 @@ CREATE TABLE IF NOT EXISTS public.JCR (
     jcrYear character varying,
     abbrJournal character varying,
     issn character varying DEFAULT NULL::character varying,
-    eissn character varyingDEFAULT NULL::character varying,
+    eissn character varying DEFAULT NULL::character varying,
     totalCites character varying DEFAULT NULL::character varying,
     totalArticles character varying DEFAULT NULL::character varying,
     citableItems character varying DEFAULT NULL::character varying,

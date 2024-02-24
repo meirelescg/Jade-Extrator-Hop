@@ -96,6 +96,8 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>Y</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportPeriodicalMagazine.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -147,7 +149,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>/home/lilith/repository/hop/config/projects/tmp/Jade-Extrator-Hop/metadata/dataset/pipeline/ImportInstitution.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportInstitution.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
