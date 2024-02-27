@@ -1,4 +1,3 @@
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE TABLE IF NOT EXISTS public.country (
     id uuid NOT NULL DEFAULT uuid_generate_v4(),
     name character varying NOT NULL,
@@ -211,12 +210,12 @@ CREATE TABLE IF NOT EXISTS public.bibliographic_production (
 CREATE TABLE IF NOT EXISTS public.software (
     id uuid NOT NULL DEFAULT uuid_generate_v4(),
     created_at timestamp without time zone NOT NULL DEFAULT now(),
-    title character varying(400),
-    platform character varying(255),
-    goal character varying(400),
-    environment character varying(255),
-    availability character varying(150),
-    financing_institutionc character varying(255),
+    title character varying,
+    platform character varying,
+    goal character varying,
+    environment character varying,
+    availability character varying,
+    financing_institutionc character varying,
     researcher_id uuid,
     year smallint,
     is_new boolean DEFAULT true,
@@ -405,3 +404,35 @@ CREATE TABLE IF NOT EXISTS public.JCR (
     jif2019 character varying DEFAULT NULL::character varying,
     url_revista character varying NOT NULL
 );
+CREATE TABLE IF NOT EXISTS public.researcher_production (
+    researcher_production_id uuid NOT NULL DEFAULT uuid_generate_v4(),
+    researcher_id uuid NOT NULL,
+    articles integer,
+    book_chapters integer,
+    book integer,
+    work_in_event integer,
+    patent integer,
+    software integer,
+    brand integer,
+    great_area text,
+    area_specialty text,
+    city character varying(100),
+    organ character varying(100),
+    CONSTRAINT researcher_production_pkey PRIMARY KEY (researcher_production_id),
+    CONSTRAINT researcher_production_researcher_id_fkey FOREIGN KEY (researcher_id) REFERENCES public.researcher (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
+);
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+create EXTENSION fuzzystrmatch;
+create EXTENSION pg_trgm;
+CREATE EXTENSION unaccent;
+CREATE INDEX IDXT_TERM_research_dictionary ON research_dictionary (term);
+CREATE INDEX IDXT__frequency_dictionary ON research_dictionary (frequency);
+CREATE INDEX IDXT_TERM ON researcher_frequency (term);
+CREATE INDEX IDX_NAME ON researcher (name);
+CREATE INDEX IDXT_TITLE ON bibliographic_production (title);
+CREATE INDEX IDX_AREA_EXPERTISE ON area_expertise (name);
+CREATE INDEX IDX_bibliographic_production_year_ ON bibliographic_production (year_);
+CREATE INDEX IDX_bibliographic_production_year ON bibliographic_production (YEAR);
+CREATE INDEX IDXT_TERM_dictionary ON research_dictionary (term);
+CREATE INDEX IDX_NAME_institution ON institution(name);
+CREATE INDEX IDX_NAME_researcher_production ON researcher_production(area_specialty);

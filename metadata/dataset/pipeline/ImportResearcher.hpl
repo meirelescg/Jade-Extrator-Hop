@@ -37,11 +37,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Extração dos dados</from>
-      <to>Limpando</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Renomeando</from>
       <to>Sort Lattes SIMCC</to>
       <enabled>Y</enabled>
@@ -127,11 +122,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Join Lattes - 2</from>
-      <to>Limpando 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Limpando 3</from>
       <to>Montando last_update</to>
       <enabled>Y</enabled>
@@ -191,6 +181,36 @@
       <to>Update</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Join Lattes - 2</from>
+      <to>Limpando 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Extração dos dados</from>
+      <to>Lattes Não Nulo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Lattes Não Nulo</from>
+      <to>Limpando</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Strings cut</from>
+      <to>Limpando</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Lattes Não Nulo</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>Strings cut</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <transform>
     <name>Adicionar ou Atualizar</name>
@@ -217,7 +237,7 @@
     <send_true_to>Montando last_update 2</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>736</xloc>
+      <xloc>896</xloc>
       <yloc>640</yloc>
     </GUI>
   </transform>
@@ -240,7 +260,7 @@
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>736</xloc>
+      <xloc>896</xloc>
       <yloc>800</yloc>
     </GUI>
   </transform>
@@ -262,7 +282,7 @@
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1440</xloc>
+      <xloc>1600</xloc>
       <yloc>480</yloc>
     </GUI>
   </transform>
@@ -279,7 +299,7 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>1360</xloc>
+      <xloc>1520</xloc>
       <yloc>272</yloc>
     </GUI>
   </transform>
@@ -497,7 +517,7 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>160</xloc>
+      <xloc>112</xloc>
       <yloc>688</yloc>
     </GUI>
   </transform>
@@ -527,7 +547,7 @@
     <send_true_to>Update</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>1360</xloc>
+      <xloc>1520</xloc>
       <yloc>384</yloc>
     </GUI>
   </transform>
@@ -585,7 +605,7 @@
     <rownum>N</rownum>
     <attributes/>
     <GUI>
-      <xloc>160</xloc>
+      <xloc>112</xloc>
       <yloc>800</yloc>
     </GUI>
   </transform>
@@ -611,7 +631,7 @@
     <transform2>Sort Cidades XML</transform2>
     <attributes/>
     <GUI>
-      <xloc>1152</xloc>
+      <xloc>1312</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -637,7 +657,7 @@
     <transform2>Sort Lattes XML</transform2>
     <attributes/>
     <GUI>
-      <xloc>592</xloc>
+      <xloc>752</xloc>
       <yloc>640</yloc>
     </GUI>
   </transform>
@@ -663,8 +683,37 @@
     <transform2>Sort Lattes XML 2</transform2>
     <attributes/>
     <GUI>
-      <xloc>1440</xloc>
+      <xloc>1600</xloc>
       <yloc>720</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Lattes Não Nulo</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compare>
+      <condition>
+        <conditions>
+</conditions>
+        <function>IS NOT NULL</function>
+        <leftvalue>NUMERO-IDENTIFICADOR</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+      </condition>
+    </compare>
+    <send_false_to>Select values</send_false_to>
+    <send_true_to>Limpando</send_true_to>
+    <attributes/>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>688</yloc>
     </GUI>
   </transform>
   <transform>
@@ -716,7 +765,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>304</xloc>
+      <xloc>464</xloc>
       <yloc>688</yloc>
     </GUI>
   </transform>
@@ -769,7 +818,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>880</xloc>
+      <xloc>1024</xloc>
       <yloc>640</yloc>
     </GUI>
   </transform>
@@ -837,7 +886,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1568</xloc>
+      <xloc>1712</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -862,7 +911,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1824</xloc>
+      <xloc>1968</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -887,7 +936,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>896</xloc>
+      <xloc>1056</xloc>
       <yloc>384</yloc>
     </GUI>
   </transform>
@@ -915,7 +964,7 @@
     <failIfNoFile>Y</failIfNoFile>
     <attributes/>
     <GUI>
-      <xloc>1696</xloc>
+      <xloc>1840</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -943,7 +992,7 @@
     <failIfNoFile>Y</failIfNoFile>
     <attributes/>
     <GUI>
-      <xloc>736</xloc>
+      <xloc>896</xloc>
       <yloc>384</yloc>
     </GUI>
   </transform>
@@ -975,8 +1024,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>944</xloc>
-      <yloc>576</yloc>
+      <xloc>1104</xloc>
+      <yloc>640</yloc>
     </GUI>
   </transform>
   <transform>
@@ -997,7 +1046,7 @@
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>160</xloc>
+      <xloc>320</xloc>
       <yloc>576</yloc>
     </GUI>
   </transform>
@@ -1045,7 +1094,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>304</xloc>
+      <xloc>464</xloc>
       <yloc>576</yloc>
     </GUI>
   </transform>
@@ -1077,7 +1126,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>880</xloc>
+      <xloc>1040</xloc>
       <yloc>800</yloc>
     </GUI>
   </transform>
@@ -1125,7 +1174,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1440</xloc>
+      <xloc>1600</xloc>
       <yloc>560</yloc>
     </GUI>
   </transform>
@@ -1209,7 +1258,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>2080</xloc>
+      <xloc>2224</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -1280,8 +1329,97 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1216</xloc>
+      <xloc>1376</xloc>
       <yloc>384</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>filename</name>
+      </field>
+      <field>
+        <name>short_filename</name>
+      </field>
+      <field>
+        <name>path</name>
+      </field>
+      <field>
+        <name>type</name>
+      </field>
+      <field>
+        <name>exists</name>
+      </field>
+      <field>
+        <name>ishidden</name>
+      </field>
+      <field>
+        <name>isreadable</name>
+      </field>
+      <field>
+        <name>iswriteable</name>
+      </field>
+      <field>
+        <name>lastmodifiedtime</name>
+      </field>
+      <field>
+        <name>size</name>
+      </field>
+      <field>
+        <name>extension</name>
+      </field>
+      <field>
+        <name>uri</name>
+      </field>
+      <field>
+        <name>rooturi</name>
+      </field>
+      <field>
+        <name>NOME</name>
+      </field>
+      <field>
+        <name>PAIS-DE-NACIONALIDADE</name>
+      </field>
+      <field>
+        <name>ORCID</name>
+      </field>
+      <field>
+        <name>CIDADE-NASCIMENTO</name>
+      </field>
+      <field>
+        <name>NOME-EM-CITACOES-BIBLIOGRAFICAS</name>
+      </field>
+      <field>
+        <name>RESUMO</name>
+      </field>
+      <field>
+        <name>RESUMO-EN</name>
+      </field>
+      <field>
+        <name>OUTRAS-INFORMACOES-RELEVANTES</name>
+      </field>
+      <field>
+        <name>DATA-ATUALIZACAO</name>
+      </field>
+      <field>
+        <name>HORA-ATUALIZACAO</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>800</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1314,7 +1452,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1024</xloc>
+      <xloc>1184</xloc>
       <yloc>800</yloc>
     </GUI>
   </transform>
@@ -1348,7 +1486,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1024</xloc>
+      <xloc>1184</xloc>
       <yloc>640</yloc>
     </GUI>
   </transform>
@@ -1382,7 +1520,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1440</xloc>
+      <xloc>1600</xloc>
       <yloc>640</yloc>
     </GUI>
   </transform>
@@ -1416,7 +1554,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>608</xloc>
       <yloc>576</yloc>
     </GUI>
   </transform>
@@ -1450,7 +1588,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>608</xloc>
       <yloc>688</yloc>
     </GUI>
   </transform>
@@ -1484,7 +1622,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1296</xloc>
+      <xloc>1456</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -1509,7 +1647,7 @@
         <precision>-2</precision>
         <conversion_mask>ddMMyyyyHHmmss</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale/>
         <date_format_timezone/>
         <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
@@ -1521,7 +1659,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1952</xloc>
+      <xloc>2096</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -1546,7 +1684,7 @@
         <precision>-2</precision>
         <conversion_mask>ddMMyyyyHHmmss</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale/>
         <date_format_timezone/>
         <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
@@ -1558,8 +1696,33 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1056</xloc>
+      <xloc>1216</xloc>
       <yloc>384</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Strings cut</name>
+    <type>StringCut</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <cut_from>0</cut_from>
+        <cut_to>16</cut_to>
+        <in_stream_name>short_filename</in_stream_name>
+        <out_stream_name>NUMERO-IDENTIFICADOR</out_stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>800</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1640,7 +1803,7 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>2240</xloc>
+      <xloc>2384</xloc>
       <yloc>720</yloc>
     </GUI>
   </transform>
@@ -1703,11 +1866,15 @@
     <use_batch>N</use_batch>
     <attributes/>
     <GUI>
-      <xloc>1536</xloc>
+      <xloc>1696</xloc>
       <yloc>384</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
   </transform_error_handling>
-  <attributes/>
+  <attributes>
+    <group>
+      <name>debug_plugin</name>
+    </group>
+  </attributes>
 </pipeline>
