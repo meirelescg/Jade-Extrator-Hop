@@ -26,8 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>80</xloc>
-      <yloc>560</yloc>
+      <xloc>96</xloc>
+      <yloc>480</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -624,8 +624,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1024</xloc>
-      <yloc>624</yloc>
+      <xloc>1104</xloc>
+      <yloc>544</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -754,8 +754,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>880</xloc>
-      <yloc>592</yloc>
+      <xloc>912</xloc>
+      <yloc>624</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -829,7 +829,7 @@ update event_organization set is_new = false;</sql>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>496</xloc>
-      <yloc>736</yloc>
+      <yloc>784</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -880,8 +880,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>896</xloc>
-      <yloc>736</yloc>
+      <xloc>912</xloc>
+      <yloc>816</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -1116,13 +1116,6 @@ update event_organization set is_new = false;</sql>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Start</from>
-      <to>ReadXML.hpl 15</to>
-      <enabled>N</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>

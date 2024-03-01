@@ -281,8 +281,8 @@
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>48</xloc>
-      <yloc>0</yloc>
+      <xloc>80</xloc>
+      <yloc>32</yloc>
       <attributes_hac/>
     </action>
   </actions>

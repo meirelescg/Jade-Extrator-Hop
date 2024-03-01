@@ -421,6 +421,32 @@ CREATE TABLE IF NOT EXISTS public.researcher_production (
     CONSTRAINT researcher_production_pkey PRIMARY KEY (researcher_production_id),
     CONSTRAINT researcher_production_researcher_id_fkey FOREIGN KEY (researcher_id) REFERENCES public.researcher (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
 );
+CREATE TABLE IF NOT EXISTS public.researcher_address
+(
+    id uuid NOT NULL DEFAULT uuid_generate_v4(),
+    researcher_id uuid NOT NULL,
+    created_at timestamp without time zone NOT NULL DEFAULT now(),
+    updated_at timestamp without time zone,
+    deleted_at timestamp without time zone,
+    city character varying(50) ,
+    organ character varying(255) ,
+    unity character varying(255) ,
+    institution character varying(255) ,
+    public_place character varying(255) ,
+    district character varying(255) ,
+    cep character varying(255) ,
+    mailbox character varying(255) ,
+    fax character varying(20) ,
+    url_homepage character varying(300) ,
+    telephone character varying(20) ,
+    country character varying(100) ,
+    uf character varying(5) ,
+    CONSTRAINT "PK_180e58d987170694c2c11424916" PRIMARY KEY (id),
+    CONSTRAINT "FKAddressResearcher" FOREIGN KEY (researcher_id)
+        REFERENCES public.researcher (id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+);
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 create EXTENSION fuzzystrmatch;
 create EXTENSION pg_trgm;
