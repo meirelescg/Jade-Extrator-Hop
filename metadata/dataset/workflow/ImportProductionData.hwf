@@ -26,8 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>96</xloc>
-      <yloc>480</yloc>
+      <xloc>0</xloc>
+      <yloc>320</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -78,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>208</xloc>
-      <yloc>144</yloc>
+      <xloc>160</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -776,8 +776,8 @@ update event_organization set is_new = false;</sql>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
-      <xloc>128</xloc>
-      <yloc>256</yloc>
+      <xloc>32</xloc>
+      <yloc>192</yloc>
       <attributes_hac/>
     </action>
     <action>

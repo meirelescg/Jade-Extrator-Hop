@@ -280,14 +280,11 @@
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>"public"</schema>
     <specify_fields>Y</specify_fields>
     <table>area_specialty</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
@@ -604,7 +601,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1616</xloc>
+      <xloc>1600</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -732,7 +729,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1776</xloc>
+      <xloc>1760</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
@@ -871,7 +868,7 @@ FROM "public".sub_area_expertise
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1424</xloc>
+      <xloc>1408</xloc>
       <yloc>64</yloc>
     </GUI>
   </transform>
