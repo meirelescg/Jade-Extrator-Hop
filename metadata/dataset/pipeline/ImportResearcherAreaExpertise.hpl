@@ -23,7 +23,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML Area_Expertise </to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Read XML Area_Expertise </from>
@@ -213,7 +213,7 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML Area_Expertise </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
   </order>
   <transform>
