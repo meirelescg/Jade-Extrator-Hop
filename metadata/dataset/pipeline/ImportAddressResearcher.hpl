@@ -33,7 +33,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML address </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Select </from>
@@ -123,7 +123,7 @@
     <hop>
       <from>Leitura dos XML</from>
       <to>Read XML address </to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
