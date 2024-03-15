@@ -83,7 +83,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML graduation</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Read XML graduation teste</from>
@@ -91,11 +91,49 @@
       <enabled>N</enabled>
     </hop>
     <hop>
-      <from>Leitura dos XML</from>
+      <from>Get file names</from>
       <to>Read XML graduation</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
   </order>
+  <transform>
+    <name>Get file names</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <exclude_wildcard_Field/>
+    <file>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/atual</name>
+    </file>
+    <filefield>N</filefield>
+    <filename_Field/>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <rownum_field/>
+    <wildcard_Field/>
+    <attributes/>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>96</yloc>
+    </GUI>
+  </transform>
   <transform>
     <name>Get rows files xml</name>
     <type>RowsFromResult</type>
@@ -119,47 +157,6 @@
     <GUI>
       <xloc>192</xloc>
       <yloc>384</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Leitura dos XML</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>192</xloc>
-      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
@@ -582,7 +579,7 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>704</xloc>
+      <xloc>720</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>
@@ -646,7 +643,7 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1280</xloc>
+      <xloc>1248</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>
@@ -680,7 +677,7 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>848</xloc>
+      <xloc>864</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>
@@ -746,7 +743,7 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1168</xloc>
+      <xloc>1136</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>
@@ -804,7 +801,7 @@ FROM "public".researcher
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>560</xloc>
+      <xloc>576</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>
