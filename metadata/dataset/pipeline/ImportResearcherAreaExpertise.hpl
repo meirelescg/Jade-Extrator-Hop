@@ -362,7 +362,7 @@
       <file_required>N</file_required>
       <filemask>.*xml</filemask>
       <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/atual</name>
     </file>
     <file>
       <file_required>N</file_required>
