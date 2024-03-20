@@ -773,7 +773,6 @@ update guidance  set is_new = false;
 update brand  set is_new = false;
 update participation_events set is_new = false;
 update event_organization set is_new = false;</sql>
-      <sqlfilename/>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
