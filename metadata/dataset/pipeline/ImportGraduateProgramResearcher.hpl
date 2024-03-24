@@ -56,11 +56,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Pesquisadores - SIMCC</from>
-      <to>Sort Lattes - 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort Lattes - 1</from>
       <to>Join Lattes</to>
       <enabled>Y</enabled>
@@ -76,11 +71,77 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Pesquisadores - SIMCC</from>
+      <to>Renomeando 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renomeando 2</from>
+      <to>Sort Lattes - 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Limpando - 2</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
       <to>Insert / update</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <transform>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <GUI>
+      <xloc>1520</xloc>
+      <yloc>320</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compare>
+      <condition>
+        <conditions>
+</conditions>
+        <function>IS NULL</function>
+        <leftvalue>id</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+      </condition>
+    </compare>
+    <send_false_to>Insert / update</send_false_to>
+    <send_true_to>Dummy (do nothing)</send_true_to>
+    <attributes/>
+    <GUI>
+      <xloc>1520</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
   <transform>
     <name>Insert / update</name>
     <type>InsertUpdate</type>
@@ -99,13 +160,11 @@
         <condition>=</condition>
         <field>graduate_program_id</field>
         <name>graduate_program_id</name>
-        <name2/>
       </key>
       <key>
         <condition>=</condition>
         <field>researcher_id</field>
         <name>id</name>
-        <name2/>
       </key>
       <schema>"public"</schema>
       <table>graduate_program_researcher</table>
@@ -133,7 +192,7 @@
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
-      <xloc>1584</xloc>
+      <xloc>1664</xloc>
       <yloc>208</yloc>
     </GUI>
   </transform>
@@ -176,7 +235,7 @@
     </partitioning>
     <join_type>RIGHT OUTER</join_type>
     <keys_1>
-      <key>lattes_id</key>
+      <key>lattes_id_db</key>
     </keys_1>
     <keys_2>
       <key>lattes_id</key>
@@ -213,6 +272,9 @@
       <field>
         <name>type_</name>
       </field>
+      <field>
+        <name>researcher_id</name>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -245,6 +307,9 @@
       <field>
         <name>type_</name>
       </field>
+      <field>
+        <name>researcher_id</name>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -269,6 +334,7 @@
     <limit>0</limit>
     <sql>SELECT 
 	gp.code,
+	r.researcher_id,
 	r.lattes_id,
 	gpr.year,
 	gpr.type_
@@ -307,7 +373,7 @@ FROM
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>1024</xloc>
+      <xloc>896</xloc>
       <yloc>32</yloc>
     </GUI>
   </transform>
@@ -361,6 +427,33 @@ FROM
     <attributes/>
     <GUI>
       <xloc>480</xloc>
+      <yloc>32</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Renomeando 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>id</name>
+      </field>
+      <field>
+        <name>lattes_id</name>
+        <rename>lattes_id_db</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1056</xloc>
       <yloc>32</yloc>
     </GUI>
   </transform>
@@ -486,7 +579,7 @@ FROM
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>lattes_id</name>
+        <name>lattes_id_db</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
