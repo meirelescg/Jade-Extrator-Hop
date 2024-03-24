@@ -396,8 +396,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>688</yloc>
+      <xloc>0</xloc>
+      <yloc>368</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1016,8 +1016,8 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>288</xloc>
-      <yloc>560</yloc>
+      <xloc>32</xloc>
+      <yloc>464</yloc>
     </GUI>
   </transform>
   <transform>

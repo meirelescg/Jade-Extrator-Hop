@@ -31,32 +31,6 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>ReadXMLAtt 1</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXMLAtt.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>256</xloc>
-      <yloc>336</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
       <name>ImportAddressResearcher.hpl</name>
       <description/>
       <type>PIPELINE</type>
@@ -78,8 +52,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>240</xloc>
-      <yloc>512</yloc>
+      <xloc>288</xloc>
+      <yloc>400</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -230,21 +204,6 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>delete from researcher_address</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <connection>Simcc_DB</connection>
-      <sendOneStatement>N</sendOneStatement>
-      <sql>delete from researcher_address;</sql>
-      <sqlfromfile>N</sqlfromfile>
-      <useVariableSubstitution>N</useVariableSubstitution>
-      <parallel>N</parallel>
-      <xloc>480</xloc>
-      <yloc>208</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
       <name>reset update_abstract</name>
       <description/>
       <type>SQL</type>
@@ -285,15 +244,34 @@
       <yloc>480</yloc>
       <attributes_hac/>
     </action>
+    <action>
+      <name>ReadXML.hpl  2</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>352</xloc>
+      <yloc>192</yloc>
+      <attributes_hac/>
+    </action>
   </actions>
   <hops>
-    <hop>
-      <from>ReadXMLAtt 1</from>
-      <to>ImportAddressResearcher.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
     <hop>
       <from>ReadXML.hpl </from>
       <to>ImportResearcher.hpl</to>
@@ -323,13 +301,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>delete from researcher_address</from>
-      <to>ReadXMLAtt 1</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Start</from>
       <to>reset update_abstract</to>
       <enabled>Y</enabled>
@@ -344,13 +315,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ImportResearcher.hpl</from>
-      <to>delete from researcher_address</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>delete from researcher_area_expertise</from>
       <to>ReadXMLAtt 2</to>
       <enabled>Y</enabled>
@@ -360,6 +324,20 @@
     <hop>
       <from>ReadXMLAtt 2</from>
       <to>ImportResearcherAreaExpertise.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ImportResearcher.hpl</from>
+      <to>ReadXML.hpl  2</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ReadXML.hpl  2</from>
+      <to>ImportAddressResearcher.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
