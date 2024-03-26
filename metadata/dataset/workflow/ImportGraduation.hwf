@@ -31,7 +31,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>ReadXML.hpl</name>
+      <name>ReadXMLAtt.hpl</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -41,7 +41,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXMLAtt.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -83,32 +85,6 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>ReadXML.hpl (2)</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>288</xloc>
-      <yloc>64</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
       <name>ImportEspecializacao.hpl</name>
       <description/>
       <type>PIPELINE</type>
@@ -135,32 +111,6 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>ReadXML.hpl (3)</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>464</xloc>
-      <yloc>208</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
       <name>ImportDoutorado.hpl</name>
       <description/>
       <type>PIPELINE</type>
@@ -182,34 +132,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>624</xloc>
+      <xloc>640</xloc>
       <yloc>208</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ReadXML.hpl (4)</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>624</xloc>
-      <yloc>64</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -238,17 +162,95 @@
       <yloc>64</yloc>
       <attributes_hac/>
     </action>
+    <action>
+      <name>ReadXMLAtt.hpl 2</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXMLAtt.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>288</xloc>
+      <yloc>64</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ReadXMLAtt.hpl 3</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXMLAtt.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>464</xloc>
+      <yloc>208</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ReadXMLAtt.hpl 4</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXMLAtt.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>640</xloc>
+      <yloc>64</yloc>
+      <attributes_hac/>
+    </action>
   </actions>
   <hops>
     <hop>
       <from>Start</from>
-      <to>ReadXML.hpl</to>
+      <to>ReadXMLAtt.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>ReadXML.hpl</from>
+      <from>ReadXMLAtt.hpl</from>
       <to>ImportGraduacao.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
@@ -256,13 +258,13 @@
     </hop>
     <hop>
       <from>ImportGraduacao.hpl</from>
-      <to>ReadXML.hpl (2)</to>
+      <to>ReadXMLAtt.hpl 2</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ReadXML.hpl (2)</from>
+      <from>ReadXMLAtt.hpl 2</from>
       <to>ImportEspecializacao.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
@@ -270,13 +272,13 @@
     </hop>
     <hop>
       <from>ImportEspecializacao.hpl</from>
-      <to>ReadXML.hpl (3)</to>
+      <to>ReadXMLAtt.hpl 3</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ReadXML.hpl (3)</from>
+      <from>ReadXMLAtt.hpl 3</from>
       <to>ImportDoutorado.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
@@ -284,13 +286,13 @@
     </hop>
     <hop>
       <from>ImportDoutorado.hpl</from>
-      <to>ReadXML.hpl (4)</to>
+      <to>ReadXMLAtt.hpl 4</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ReadXML.hpl (4)</from>
+      <from>ReadXMLAtt.hpl 4</from>
       <to>ImportMestrado.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
