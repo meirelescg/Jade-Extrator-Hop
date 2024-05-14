@@ -1,7 +1,7 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "simcc_",
+      "databaseName": "temporary_simcc",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
       "hostname": "localhost",
