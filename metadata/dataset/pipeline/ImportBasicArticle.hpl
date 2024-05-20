@@ -396,8 +396,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>0</xloc>
-      <yloc>368</yloc>
+      <xloc>256</xloc>
+      <yloc>688</yloc>
     </GUI>
   </transform>
   <transform>
@@ -441,7 +441,7 @@
       <schema_name/>
     </partitioning>
     <commit>1000000</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <fields>
       <field>
         <column_name>title</column_name>
@@ -1016,8 +1016,8 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>32</xloc>
-      <yloc>464</yloc>
+      <xloc>288</xloc>
+      <yloc>560</yloc>
     </GUI>
   </transform>
   <transform>
@@ -2019,7 +2019,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
@@ -2047,7 +2047,7 @@ FROM "public".researcher
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>select  bp.id, bp.type, bp.title, r.name from bibliographic_production bp, researcher r where bp.researcher_id = r.id and bp.type='ARTICLE'</sql>
@@ -2069,7 +2069,7 @@ FROM "public".researcher
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT

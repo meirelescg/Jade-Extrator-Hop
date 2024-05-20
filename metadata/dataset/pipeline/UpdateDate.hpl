@@ -961,7 +961,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
@@ -989,7 +989,7 @@ FROM "public".researcher
       <schema_name/>
     </partitioning>
     <commit>1</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <error_ignored>N</error_ignored>
     <ignore_flag_field/>
     <lookup>

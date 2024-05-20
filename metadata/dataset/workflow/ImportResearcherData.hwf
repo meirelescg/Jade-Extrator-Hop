@@ -26,8 +26,34 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>0</xloc>
-      <yloc>176</yloc>
+      <xloc>416</xloc>
+      <yloc>112</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ReadXML.hpl 3</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>832</xloc>
+      <yloc>112</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -52,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>368</xloc>
-      <yloc>352</yloc>
+      <xloc>1024</xloc>
+      <yloc>112</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -80,8 +106,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>464</xloc>
-      <yloc>16</yloc>
+      <xloc>704</xloc>
+      <yloc>112</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -106,8 +132,34 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>272</xloc>
-      <yloc>0</yloc>
+      <xloc>560</xloc>
+      <yloc>112</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ReadXML.hpl 4</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>1024</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -132,7 +184,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>752</xloc>
+      <xloc>816</xloc>
       <yloc>272</yloc>
       <attributes_hac/>
     </action>
@@ -158,8 +210,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1104</xloc>
-      <yloc>112</yloc>
+      <xloc>608</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -184,79 +236,19 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1232</xloc>
-      <yloc>304</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>reset update_abstract</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <connection>Simcc_DB</connection>
-      <sendOneStatement>N</sendOneStatement>
-      <sql>update  researcher set update_abstract= false</sql>
-      <sqlfromfile>N</sqlfromfile>
-      <useVariableSubstitution>N</useVariableSubstitution>
-      <parallel>N</parallel>
-      <xloc>80</xloc>
-      <yloc>32</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ReadXML.hpl  2</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>352</xloc>
-      <yloc>192</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ReadXML.hpl  2 2</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ReadXML.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>592</xloc>
-      <yloc>416</yloc>
+      <xloc>400</xloc>
+      <yloc>272</yloc>
       <attributes_hac/>
     </action>
   </actions>
   <hops>
+    <hop>
+      <from>ReadXML.hpl 3</from>
+      <to>ImportAddressResearcher.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
     <hop>
       <from>ReadXML.hpl </from>
       <to>ImportResearcher.hpl</to>
@@ -279,43 +271,29 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
+      <from>ReadXML.hpl 4</from>
+      <to>ImportResearcherAreaExpertise.hpl</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
       <from>Start</from>
-      <to>reset update_abstract</to>
+      <to>ReadXML.hpl </to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>reset update_abstract</from>
-      <to>ReadXML.hpl </to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>ImportResearcher.hpl</from>
-      <to>ReadXML.hpl  2</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ReadXML.hpl  2</from>
-      <to>ImportAddressResearcher.hpl</to>
+      <to>ReadXML.hpl 3</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportAddressResearcher.hpl</from>
-      <to>ReadXML.hpl  2 2</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>ReadXML.hpl  2 2</from>
-      <to>ImportResearcherAreaExpertise.hpl</to>
+      <to>ReadXML.hpl 4</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

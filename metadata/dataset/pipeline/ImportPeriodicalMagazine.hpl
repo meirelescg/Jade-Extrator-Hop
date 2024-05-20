@@ -86,11 +86,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Read XML ARTICLE Test </from>
-      <to>If Null</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>If Null</from>
       <to>Select values</to>
       <enabled>Y</enabled>
@@ -163,8 +158,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>208</yloc>
+      <xloc>16</xloc>
+      <yloc>256</yloc>
     </GUI>
   </transform>
   <transform>
@@ -250,104 +245,6 @@
     <GUI>
       <xloc>976</xloc>
       <yloc>256</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Read XML ARTICLE Test </name>
-    <type>getXMLData</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/4021221951532780.xml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>TITULO-DO-PERIODICO-OU-REVISTA</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@TITULO-DO-PERIODICO-OU-REVISTA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ISSN</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@ISSN</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>QUALIS</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@QUALIS</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <loopxpath>/CURRICULO-VITAE/PRODUCAO-BIBLIOGRAFICA/ARTIGOS-PUBLICADOS/ARTIGO-PUBLICADO</loopxpath>
-    <IsInFields>N</IsInFields>
-    <IsAFile>N</IsAFile>
-    <XmlField/>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <attributes/>
-    <GUI>
-      <xloc>368</xloc>
-      <yloc>432</yloc>
     </GUI>
   </transform>
   <transform>
@@ -634,7 +531,7 @@
       <schema_name/>
     </partitioning>
     <commit>1000000</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <fields>
       <field>
         <column_name>issn</column_name>
@@ -671,7 +568,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
@@ -703,7 +600,7 @@ FROM "public".periodical_magazine
       <schema_name/>
     </partitioning>
     <commit>100</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <error_ignored>N</error_ignored>
     <lookup>
       <key>

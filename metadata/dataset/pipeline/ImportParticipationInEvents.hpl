@@ -2288,7 +2288,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
@@ -2322,7 +2322,7 @@ FROM "public".participation_events
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
@@ -2349,7 +2349,7 @@ FROM "public".researcher
       <schema_name/>
     </partitioning>
     <commit>100000</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <fields>
       <field>
         <column_name>researcher_id</column_name>

@@ -1826,7 +1826,7 @@
       <schema_name/>
     </partitioning>
     <commit>1000000</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <fields>
       <field>
         <column_name>title</column_name>
@@ -1910,7 +1910,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
@@ -1952,7 +1952,7 @@ FROM "public".researcher
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>select  bp.id, bp.type, bp.title, r.name from bibliographic_production bp, researcher r where bp.researcher_id = r.id and bp.type='BOOK'</sql>
@@ -1974,7 +1974,7 @@ FROM "public".researcher
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT

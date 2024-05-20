@@ -90,45 +90,7 @@
       <to>Select values</to>
       <enabled>N</enabled>
     </hop>
-    <hop>
-      <from>Get file names</from>
-      <to>Read XML graduation</to>
-      <enabled>N</enabled>
-    </hop>
   </order>
-  <transform>
-    <name>Get file names</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>192</xloc>
-      <yloc>96</yloc>
-    </GUI>
-  </transform>
   <transform>
     <name>Get rows files xml</name>
     <type>RowsFromResult</type>
@@ -574,8 +536,8 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>112</yloc>
+      <xloc>704</xloc>
+      <yloc>96</yloc>
     </GUI>
   </transform>
   <transform>
@@ -638,7 +600,7 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1296</xloc>
+      <xloc>1248</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>
@@ -672,8 +634,8 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>112</yloc>
+      <xloc>848</xloc>
+      <yloc>96</yloc>
     </GUI>
   </transform>
   <transform>
@@ -738,7 +700,7 @@ if(POSDOUTORADO =="CONCLUIDO"){
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1184</xloc>
+      <xloc>1136</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>
@@ -785,7 +747,7 @@ if(POSDOUTORADO =="CONCLUIDO"){
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
@@ -796,8 +758,8 @@ FROM "public".researcher
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>112</yloc>
+      <xloc>560</xloc>
+      <yloc>96</yloc>
     </GUI>
   </transform>
   <transform>
@@ -812,7 +774,7 @@ FROM "public".researcher
       <schema_name/>
     </partitioning>
     <commit>100</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <lookup>
       <key>
         <condition>=</condition>
@@ -830,7 +792,7 @@ FROM "public".researcher
     <update_bypassed>N</update_bypassed>
     <attributes/>
     <GUI>
-      <xloc>1456</xloc>
+      <xloc>1408</xloc>
       <yloc>112</yloc>
     </GUI>
   </transform>

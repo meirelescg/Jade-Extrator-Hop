@@ -5,6 +5,7 @@
   <description/>
   <extended_description/>
   <workflow_version/>
+  <workflow_status>0</workflow_status>
   <created_user>-</created_user>
   <created_date>2023/04/17 12:01:01.090</created_date>
   <modified_user>-</modified_user>
@@ -26,8 +27,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>320</xloc>
-      <yloc>112</yloc>
+      <xloc>224</xloc>
+      <yloc>64</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -40,20 +41,18 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportBasicData.hwf</filename>
-      <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/ImporBasicData</logfile>
-      <loglevel>Error</loglevel>
+      <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>448</xloc>
-      <yloc>0</yloc>
+      <xloc>384</xloc>
+      <yloc>64</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -66,20 +65,18 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportExpertiseData.hwf</filename>
-      <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/ImporExpertiseData</logfile>
-      <loglevel>Error</loglevel>
+      <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>576</xloc>
-      <yloc>112</yloc>
+      <yloc>64</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -92,20 +89,18 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportResearcherData.hwf</filename>
-      <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/ImporResearcherData</logfile>
-      <loglevel>Error</loglevel>
+      <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
       <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
-      <set_logfile>Y</set_logfile>
+      <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>576</xloc>
-      <yloc>272</yloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -118,32 +113,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportProductionData.hwf</filename>
-      <logext>log</logext>
-      <logfile>${PROJECT_HOME}/metadata/dataset/log/ImporProductionData</logfile>
-      <loglevel>Nothing</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>Y</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>320</xloc>
-      <yloc>272</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>ImportPos.hwf</name>
-      <description/>
-      <type>WORKFLOW</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/metadata/dataset/workflow/ImportPos.hwf</filename>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -154,12 +123,71 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>128</xloc>
-      <yloc>272</yloc>
+      <xloc>384</xloc>
+      <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>ImportProfnit.hpl</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <clear_files>N</clear_files>
+      <clear_rows>N</clear_rows>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportProfnit.hpl</filename>
+      <loglevel>Basic</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>384</xloc>
+      <yloc>384</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>AdjustingRelationships.hwf</name>
+      <description/>
+      <type>WORKFLOW</type>
+      <attributes/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <exec_per_row>N</exec_per_row>
+      <filename>${PROJECT_HOME}/metadata/dataset/workflow/AdjustingRelationships.hwf</filename>
+      <logext/>
+      <logfile/>
+      <loglevel>Nothing</loglevel>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
+      <set_append_logfile>N</set_append_logfile>
+      <set_logfile>N</set_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <parallel>N</parallel>
+      <xloc>144</xloc>
+      <yloc>224</yloc>
       <attributes_hac/>
     </action>
   </actions>
   <hops>
+    <hop>
+      <from>Start</from>
+      <to>ImportBasicData.hwf</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
     <hop>
       <from>ImportBasicData.hwf</from>
       <to>ImportExpertiseData.hwf</to>
@@ -182,15 +210,15 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Start</from>
-      <to>ImportBasicData.hwf</to>
-      <enabled>Y</enabled>
+      <from>ImportProductionData.hwf</from>
+      <to>ImportProfnit.hpl</to>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>ImportProductionData.hwf</from>
-      <to>ImportPos.hwf</to>
+      <to>AdjustingRelationships.hwf</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

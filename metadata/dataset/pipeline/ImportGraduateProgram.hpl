@@ -73,13 +73,12 @@
       <schema_name/>
     </partitioning>
     <commit>100</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <lookup>
       <key>
         <condition>=</condition>
-        <field>code</field>
-        <name>code</name>
-        <name2/>
+        <field>graduate_program_id</field>
+        <name>graduate_program_id</name>
       </key>
       <schema>"public"</schema>
       <table>graduate_program</table>
@@ -158,6 +157,11 @@
         <rename>visible</rename>
         <update>Y</update>
       </value>
+      <value>
+        <name>graduate_program_id</name>
+        <rename>graduate_program_id</rename>
+        <update>Y</update>
+      </value>
     </lookup>
     <update_bypassed>N</update_bypassed>
     <attributes/>
@@ -179,10 +183,10 @@
     </partitioning>
     <join_type>LEFT OUTER</join_type>
     <keys_1>
-      <key>code</key>
+      <key>graduate_program_id</key>
     </keys_1>
     <keys_2>
-      <key>CODE_SIMCC</key>
+      <key>uuid_simcc</key>
     </keys_2>
     <transform1>Sort Code - ADM</transform1>
     <transform2>Sort Code - SIMCC</transform2>
@@ -205,8 +209,8 @@
     </partitioning>
     <fields>
       <field>
-        <name>code</name>
-        <rename>CODE_SIMCC</rename>
+        <name>graduate_program_id</name>
+        <rename>uuid_simcc</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -298,63 +302,51 @@
     <fields>
       <field>
         <name>code</name>
-        <rename/>
       </field>
       <field>
         <name>name</name>
-        <rename/>
       </field>
       <field>
         <name>area</name>
-        <rename/>
       </field>
       <field>
         <name>modality</name>
-        <rename/>
       </field>
       <field>
         <name>type</name>
-        <rename/>
       </field>
       <field>
         <name>rating</name>
-        <rename/>
       </field>
       <field>
         <name>institution_id</name>
-        <rename/>
       </field>
       <field>
         <name>state</name>
-        <rename/>
       </field>
       <field>
         <name>city</name>
-        <rename/>
       </field>
       <field>
         <name>instituicao</name>
-        <rename/>
       </field>
       <field>
         <name>url_image</name>
-        <rename/>
       </field>
       <field>
         <name>region</name>
-        <rename/>
       </field>
       <field>
         <name>sigla</name>
-        <rename/>
       </field>
       <field>
         <name>description</name>
-        <rename/>
       </field>
       <field>
         <name>visible</name>
-        <rename/>
+      </field>
+      <field>
+        <name>graduate_program_id</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -375,7 +367,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>connect_adm</connection>
+    <connection>adm_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
@@ -415,10 +407,11 @@ FROM "public".graduate_program
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
+	graduate_program_id,
 	code
 FROM
 	graduate_program</sql>
@@ -449,7 +442,7 @@ FROM
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>code</name>
+        <name>graduate_program_id</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -483,7 +476,7 @@ FROM
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>CODE_SIMCC</name>
+        <name>uuid_simcc</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>

@@ -26,8 +26,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>0</xloc>
-      <yloc>320</yloc>
+      <xloc>64</xloc>
+      <yloc>128</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -78,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>160</xloc>
-      <yloc>96</yloc>
+      <xloc>208</xloc>
+      <yloc>144</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -624,8 +624,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1104</xloc>
-      <yloc>544</yloc>
+      <xloc>1024</xloc>
+      <yloc>624</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -754,8 +754,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>912</xloc>
-      <yloc>624</yloc>
+      <xloc>880</xloc>
+      <yloc>592</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -763,8 +763,6 @@
       <description/>
       <type>SQL</type>
       <attributes/>
-      <connection>Simcc_DB</connection>
-      <sendOneStatement>N</sendOneStatement>
       <sql>update bibliographic_production set is_new = false;
 update software  set is_new = false;
 update patent  set is_new = false;
@@ -773,11 +771,14 @@ update guidance  set is_new = false;
 update brand  set is_new = false;
 update participation_events set is_new = false;
 update event_organization set is_new = false;</sql>
-      <sqlfromfile>N</sqlfromfile>
-      <useVariableSubstitution>N</useVariableSubstitution>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>main_database</connection>
       <parallel>N</parallel>
-      <xloc>32</xloc>
-      <yloc>192</yloc>
+      <xloc>128</xloc>
+      <yloc>256</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -829,7 +830,7 @@ update event_organization set is_new = false;</sql>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
       <xloc>496</xloc>
-      <yloc>784</yloc>
+      <yloc>736</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -880,8 +881,8 @@ update event_organization set is_new = false;</sql>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>912</xloc>
-      <yloc>816</yloc>
+      <xloc>896</xloc>
+      <yloc>736</yloc>
       <attributes_hac/>
     </action>
   </actions>

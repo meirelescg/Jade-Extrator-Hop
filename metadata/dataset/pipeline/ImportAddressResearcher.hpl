@@ -233,12 +233,13 @@
       <schema_name/>
     </partitioning>
     <commit>100</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <lookup>
       <key>
         <condition>=</condition>
         <field>researcher_id</field>
         <name>researcher_id</name>
+        <name2/>
       </key>
       <schema>"public"</schema>
       <table>researcher_address</table>
@@ -1294,7 +1295,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT

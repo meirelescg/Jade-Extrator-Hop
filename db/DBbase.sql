@@ -387,10 +387,20 @@ CREATE TABLE IF NOT EXISTS public.graduate_program_researcher (
     graduate_program_id uuid NOT NULL,
     researcher_id uuid NOT NULL,
     year integer NOT NULL,
-    type_ character varying(100),
+    type_ relationship,
     CONSTRAINT graduate_program_researcher_pkey PRIMARY KEY (graduate_program_id, researcher_id, year),
     CONSTRAINT graduate_program_researcher_graduate_program_id_fkey FOREIGN KEY (graduate_program_id) REFERENCES public.graduate_program (graduate_program_id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION,
     CONSTRAINT graduate_program_researcher_researcher_id_fkey FOREIGN KEY (researcher_id) REFERENCES public.researcher (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
+);
+CREATE TABLE graduate_program_student(
+      graduate_program_id uuid NOT NULL DEFAULT uuid_generate_v4(),
+      researcher_id uuid NOT NULL DEFAULT uuid_generate_v4(),
+      year INTEGER,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (graduate_program_id, researcher_id, year),
+      FOREIGN KEY (researcher_id) REFERENCES researcher (id),
+      FOREIGN KEY (graduate_program_id) REFERENCES graduate_program (graduate_program_id)
 );
 CREATE TABLE IF NOT EXISTS public.JCR (
     rank character varying,
@@ -428,6 +438,8 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 create EXTENSION fuzzystrmatch;
 create EXTENSION pg_trgm;
 CREATE EXTENSION unaccent;
+CREATE TYPE relationship AS ENUM ('COLABORADOR', 'PERMANENTE');
+
 CREATE INDEX IDX_NAME_GIN ON researcher USING gin (name gin_trgm_ops);
 CREATE INDEX IDX_ABSTRACT_GIN ON researcher USING gin (abstract gin_trgm_ops);
 CREATE INDEX IDX_ABSTRACT_EN_GIN ON researcher USING gin (abstract_en gin_trgm_ops);

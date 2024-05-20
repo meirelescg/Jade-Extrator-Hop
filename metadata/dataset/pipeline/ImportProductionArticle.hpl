@@ -165,11 +165,6 @@
       <to>If Null</to>
       <enabled>Y</enabled>
     </hop>
-    <hop>
-      <from>Leitura dos XML</from>
-      <to>Read XML ARTICLE </to>
-      <enabled>N</enabled>
-    </hop>
   </order>
   <transform>
     <name>Dummy (Article already registered)</name>
@@ -344,47 +339,6 @@
     <GUI>
       <xloc>1552</xloc>
       <yloc>400</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Leitura dos XML</name>
-    <type>GetFileNames</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <file>
-      <file_required>N</file_required>
-      <filemask>.*xml</filemask>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <file>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <filefield>N</filefield>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <isaddresult>Y</isaddresult>
-    <limit>0</limit>
-    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
-    <rownum>N</rownum>
-    <attributes/>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1823,7 +1777,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>select  bp.id, bp.type, bp.title, r.name from bibliographic_production bp, researcher r where bp.researcher_id = r.id and bp.type='ARTICLE'</sql>
@@ -1845,7 +1799,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
@@ -1872,7 +1826,7 @@ FROM "public".bibliographic_production_article
       <schema_name/>
     </partitioning>
     <commit>1000000</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <fields>
       <field>
         <column_name>bibliographic_production_id</column_name>
@@ -1945,7 +1899,7 @@ FROM "public".bibliographic_production_article
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT

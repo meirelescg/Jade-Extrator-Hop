@@ -54,13 +54,6 @@
       <include_subfolders>N</include_subfolders>
       <name/>
     </file>
-    <file>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <filemask/>
-      <include_subfolders>N</include_subfolders>
-      <name/>
-    </file>
     <filefield>N</filefield>
     <filename_Field/>
     <filter>
