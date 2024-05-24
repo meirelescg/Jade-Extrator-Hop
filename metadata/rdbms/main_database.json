@@ -1,11 +1,11 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "cimatec_testes",
+      "databaseName": "iapos_cimatec",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
-      "hostname": "localhost",
-      "password": "Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce",
+      "hostname": "172.25.0.84",
+      "password": "Encrypted 776e364a8ab99efe24e59186b64deb78c7c4edd2",
       "pluginName": "PostgreSQL",
       "port": "5432",
       "attributes": {

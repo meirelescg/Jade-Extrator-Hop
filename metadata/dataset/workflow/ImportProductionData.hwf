@@ -624,8 +624,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1024</xloc>
-      <yloc>624</yloc>
+      <xloc>1040</xloc>
+      <yloc>544</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -676,8 +676,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>752</xloc>
-      <yloc>512</yloc>
+      <xloc>736</xloc>
+      <yloc>560</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -754,8 +754,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>880</xloc>
-      <yloc>592</yloc>
+      <xloc>912</xloc>
+      <yloc>624</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -763,6 +763,8 @@
       <description/>
       <type>SQL</type>
       <attributes/>
+      <connection>main_database</connection>
+      <sendOneStatement>N</sendOneStatement>
       <sql>update bibliographic_production set is_new = false;
 update software  set is_new = false;
 update patent  set is_new = false;
@@ -771,11 +773,8 @@ update guidance  set is_new = false;
 update brand  set is_new = false;
 update participation_events set is_new = false;
 update event_organization set is_new = false;</sql>
-      <useVariableSubstitution>F</useVariableSubstitution>
-      <sqlfromfile>F</sqlfromfile>
-      <sqlfilename/>
-      <sendOneStatement>F</sendOneStatement>
-      <connection>main_database</connection>
+      <sqlfromfile>N</sqlfromfile>
+      <useVariableSubstitution>N</useVariableSubstitution>
       <parallel>N</parallel>
       <xloc>128</xloc>
       <yloc>256</yloc>
