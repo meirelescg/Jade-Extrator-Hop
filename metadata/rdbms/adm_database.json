@@ -1,7 +1,7 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "admin_simcc",
+      "databaseName": "adm_testes",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
       "hostname": "localhost",
