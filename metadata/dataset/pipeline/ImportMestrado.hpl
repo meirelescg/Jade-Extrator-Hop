@@ -41,11 +41,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get rows files xml 2</from>
-      <to>Get data from XML 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Merge join</from>
       <to>Select values 3</to>
       <enabled>Y</enabled>
@@ -134,10 +129,6 @@
     </partitioning>
     <fields>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>degree</name>
         <nullif>MESTRADO</nullif>
@@ -433,134 +424,6 @@
     </GUI>
   </transform>
   <transform>
-    <name>Get data from XML 2</name>
-    <type>getXMLData</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>id_lattes</name>
-        <xpath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>course_name</name>
-        <xpath>@NOME-CURSO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>start</name>
-        <xpath>@ANO-DE-INICIO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>end</name>
-        <xpath>@ANO-DE-CONCLUSAO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>institution</name>
-        <xpath>@NOME-INSTITUICAO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <loopxpath>/CURRICULO-VITAE/DADOS-GERAIS/FORMACAO-ACADEMICA-TITULACAO/DOUTORADO</loopxpath>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>Y</IsAFile>
-    <XmlField>filename</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <attributes/>
-    <GUI>
-      <xloc>3744</xloc>
-      <yloc>944</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>Get rows files xml</name>
     <type>RowsFromResult</type>
     <description/>
@@ -583,31 +446,6 @@
     <GUI>
       <xloc>2144</xloc>
       <yloc>848</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Get rows files xml 2</name>
-    <type>RowsFromResult</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>filename</name>
-        <type>None</type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>3616</xloc>
-      <yloc>944</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1118,7 +956,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT id, lattes_id FROM researcher</sql>
@@ -1163,7 +1001,7 @@
       <schema_name/>
     </partitioning>
     <commit>1000</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <fields>
       <field>
         <column_name>researcher_id</column_name>
