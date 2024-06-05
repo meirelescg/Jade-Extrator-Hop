@@ -363,7 +363,7 @@ CREATE TABLE IF NOT EXISTS public.research_dictionary (
 );
 CREATE TABLE graduate_program(
     graduate_program_id uuid NOT NULL DEFAULT uuid_generate_v4(),
-    code VARCHAR(100) NOT NULL,
+    code VARCHAR(100),
     name VARCHAR(100) NOT NULL,
     area VARCHAR(100) NOT NULL,
     modality VARCHAR(100) NOT NULL,

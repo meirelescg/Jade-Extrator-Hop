@@ -240,7 +240,7 @@
     <hop>
       <from>ImportPeriodicalMagazine.hpl</from>
       <to>ImportQualis.hpl</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
