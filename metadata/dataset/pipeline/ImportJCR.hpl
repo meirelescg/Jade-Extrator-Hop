@@ -21,18 +21,18 @@
   </notepads>
   <order>
     <hop>
-      <from>Importar CSV</from>
-      <to>Selecionar os dados</to>
+      <from>CSV file input</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Selecionar os dados</from>
+      <from>Select values</from>
       <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
-    <name>Importar CSV</name>
+    <name>CSV file input</name>
     <type>CSVInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -207,7 +207,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>Selecionar os dados</name>
+    <name>Select values</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -220,55 +220,42 @@
     <fields>
       <field>
         <name>rank</name>
-        <rename/>
       </field>
       <field>
         <name>journalName</name>
-        <rename/>
       </field>
       <field>
         <name>jcrYear</name>
-        <rename/>
       </field>
       <field>
         <name>abbrJournal</name>
-        <rename/>
       </field>
       <field>
         <name>issn</name>
-        <rename/>
       </field>
       <field>
         <name>eissn</name>
-        <rename/>
       </field>
       <field>
         <name>totalCites</name>
-        <rename/>
       </field>
       <field>
         <name>totalArticles</name>
-        <rename/>
       </field>
       <field>
         <name>citableItems</name>
-        <rename/>
       </field>
       <field>
         <name>citedHalfLife</name>
-        <rename/>
       </field>
       <field>
         <name>citingHalfLife</name>
-        <rename/>
       </field>
       <field>
         <name>jif2019</name>
-        <rename/>
       </field>
       <field>
         <name>url_revista</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -290,7 +277,7 @@
       <schema_name/>
     </partitioning>
     <commit>1000</commit>
-    <connection>main_database</connection>
+    <connection>Simcc_DB</connection>
     <fields>
       <field>
         <column_name>rank</column_name>
