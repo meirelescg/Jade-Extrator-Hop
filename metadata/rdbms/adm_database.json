@@ -1,7 +1,7 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "adm_testes",
+      "databaseName": "admin",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
       "hostname": "localhost",

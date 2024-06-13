@@ -1,7 +1,7 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "cimatec_testes",
+      "databaseName": "simcc_",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
       "hostname": "localhost",

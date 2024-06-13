@@ -50,6 +50,7 @@
     <enclosure>"</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
+    <schemaDefinition/>
     <lazy_conversion>Y</lazy_conversion>
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
@@ -277,7 +278,7 @@
       <schema_name/>
     </partitioning>
     <commit>1000</commit>
-    <connection>Simcc_DB</connection>
+    <connection>main_database</connection>
     <fields>
       <field>
         <column_name>rank</column_name>

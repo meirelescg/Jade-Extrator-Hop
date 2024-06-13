@@ -92,8 +92,10 @@
       <clear_files>N</clear_files>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>Y</exec_per_row>
+      <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/metadata/dataset/pipeline/ImportQualis.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -104,7 +106,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>576</xloc>
+      <xloc>560</xloc>
       <yloc>128</yloc>
       <attributes_hac/>
     </action>
