@@ -434,6 +434,83 @@ CREATE TABLE IF NOT EXISTS public.researcher_production (
     CONSTRAINT researcher_production_pkey PRIMARY KEY (researcher_production_id),
     CONSTRAINT researcher_production_researcher_id_fkey FOREIGN KEY (researcher_id) REFERENCES public.researcher (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
 );
+CREATE TABLE IF NOT EXISTS public.subsidy
+(
+    id uuid NOT NULL DEFAULT uuid_generate_v4(),
+    researcher_id uuid NOT NULL,
+    modality_code character varying(50) ,
+    modality_name character varying(255) ,
+    call_title character varying(255) ,
+    category_level_code character varying(50) ,
+    funding_program_name character varying(255) ,
+    institute_name character varying(255) ,
+    aid_quantity integer,
+    scholarship_quantity integer
+);
+
+CREATE TABLE education (
+	id UUID NOT NULL DEFAULT uuid_generate_v4(),
+	researcher_id UUID NOT NULL,
+	degree VARCHAR(255) NOT NULL,
+	education_name VARCHAR(255),
+	education_start INTEGER,
+	education_end INTEGER,
+	institution_id UUID,
+	key_words VARCHAR(255),
+	CONSTRAINT pk_education PRIMARY KEY (id),
+	CONSTRAINT fk_researcher_education FOREIGN KEY (researcher_id) REFERENCES public.researcher (id),
+	CONSTRAINT fk_institution_education FOREIGN KEY (institution_id) REFERENCES public.institution (id)
+);
+
+
+CREATE TABLE research_group (
+    research_group_id uuid NOT NULL DEFAULT uuid_generate_v4(),
+    research_group_name VARCHAR(255),
+    researcher_id uuid,
+    institution_id uuid,
+    area VARCHAR(255),
+    last_date_sent DATE,
+    situation VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_researcher_id FOREIGN KEY (researcher_id) REFERENCES researcher(id),
+    CONSTRAINT fk_institution_id FOREIGN KEY (institution_id) REFERENCES institution(id)
+);
+
+CREATE TABLE IF NOT EXISTS public.openalex_article
+(
+    id uuid NOT NULL DEFAULT uuid_generate_v4(),
+    article_id uuid NOT NULL,
+	article_institution VARCHAR,
+	issn VARCHAR,
+	authors_institution VARCHAR,
+	abstract TEXT,
+	authors VARCHAR,
+	language VARCHAR,
+	citations_count SMALLINT,
+	pdf VARCHAR,
+	landing_page_url VARCHAR,
+	keywords VARCHAR,
+    CONSTRAINT "PK_FIXMEHELP" PRIMARY KEY (article_id)
+);
+
+CREATE TABLE IF NOT EXISTS public.openalex_researcher
+(
+    researcher_id uuid,
+    h_index integer,
+    relevance_score double precision,
+    works_count integer,
+    cited_by_count integer,
+    i10_index integer,
+    scopus character varying(255) ,
+    orcid character varying(255) ,
+    openalex character varying(255) ,
+    CONSTRAINT fk_researcher_op FOREIGN KEY (researcher_id)
+        REFERENCES public.researcher (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);
+
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 create EXTENSION fuzzystrmatch;
 create EXTENSION pg_trgm;

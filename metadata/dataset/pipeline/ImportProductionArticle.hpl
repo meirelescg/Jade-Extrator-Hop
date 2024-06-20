@@ -356,10 +356,12 @@
     <keys_1>
       <key>TITULO-DO-ARTIGO</key>
       <key>NOME-COMPLETO</key>
+      <key>ANO-DO-ARTIGO</key>
     </keys_1>
     <keys_2>
       <key>title</key>
       <key>name</key>
+      <key>year</key>
     </keys_2>
     <transform1>Sort  Article </transform1>
     <transform2>Sort rows</transform2>
@@ -1288,6 +1290,9 @@
       <field>
         <name>title</name>
       </field>
+      <field>
+        <name>year</name>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -1497,6 +1502,14 @@
         <collator_strength>0</collator_strength>
         <presorted>N</presorted>
       </field>
+      <field>
+        <name>ANO-DO-ARTIGO</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
     </fields>
     <attributes/>
     <GUI>
@@ -1533,6 +1546,14 @@
       </field>
       <field>
         <name>name</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>year</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1780,7 +1801,17 @@
     <connection>main_database</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>select  bp.id, bp.type, bp.title, r.name from bibliographic_production bp, researcher r where bp.researcher_id = r.id and bp.type='ARTICLE'</sql>
+    <sql>select  
+	bp.id, 
+	bp.type, 
+	bp.title, 
+	r.name,
+	bp.year
+from 
+	bibliographic_production bp, 
+	researcher r 
+where 
+	bp.researcher_id = r.id and bp.type='ARTICLE'</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>

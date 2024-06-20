@@ -224,5 +224,9 @@
   </hops>
   <notepads>
   </notepads>
-  <attributes/>
+  <attributes>
+    <group>
+      <name>debug_plugin</name>
+    </group>
+  </attributes>
 </workflow>
