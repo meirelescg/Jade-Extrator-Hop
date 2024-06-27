@@ -1,3 +1,9 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+create EXTENSION fuzzystrmatch;
+create EXTENSION pg_trgm;
+CREATE EXTENSION unaccent;
+CREATE TYPE relationship AS ENUM ('COLABORADOR', 'PERMANENTE');
+
 CREATE TABLE IF NOT EXISTS public.country (
     id uuid NOT NULL DEFAULT uuid_generate_v4(),
     name character varying NOT NULL,
@@ -511,11 +517,26 @@ CREATE TABLE IF NOT EXISTS public.openalex_researcher
         ON DELETE NO ACTION
 );
 
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-create EXTENSION fuzzystrmatch;
-create EXTENSION pg_trgm;
-CREATE EXTENSION unaccent;
-CREATE TYPE relationship AS ENUM ('COLABORADOR', 'PERMANENTE');
+CREATE TABLE IF NOT EXISTS public.researcher_ind_prod
+(
+    id uuid NOT NULL DEFAULT uuid_generate_v4(),
+    researcher_id uuid NOT NULL,
+    year integer NOT NULL,
+    ind_prod_article numeric(10,3),
+    ind_prod_book numeric(10,3),
+    ind_prod_book_chapter numeric(10,3),
+    ind_prod_software numeric(10,3),
+    ind_prod_report numeric(10,3),
+    ind_prod_granted_patent numeric(10,3),
+    ind_prod_not_granted_patent numeric(10,3),
+    ind_prod_guidance numeric(10,3),
+    CONSTRAINT "PKRIndProd" PRIMARY KEY (researcher_id, year),
+    CONSTRAINT "FKRIndProd" FOREIGN KEY (researcher_id)
+        REFERENCES public.researcher (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);
+
 
 CREATE INDEX IDX_NAME_GIN ON researcher USING gin (name gin_trgm_ops);
 CREATE INDEX IDX_ABSTRACT_GIN ON researcher USING gin (abstract gin_trgm_ops);

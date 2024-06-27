@@ -88,7 +88,7 @@
     <hop>
       <from>Get rows files xml</from>
       <to>Read XML ARTICLE </to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Convert Relevancia Cientifica to bool</from>
@@ -116,14 +116,9 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Read XML ARTICLE Test </from>
-      <to>Filter rows 2</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Merge join Researcher_name</from>
       <to>Insert table Bibliographic_production</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Sort country</from>
@@ -178,6 +173,11 @@
     <hop>
       <from>Filter rows Article </from>
       <to>Dummy (artigo already registered)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Leitura dos XML</from>
+      <to>Read XML ARTICLE </to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -342,8 +342,8 @@
     <send_true_to>String operations</send_true_to>
     <attributes/>
     <GUI>
-      <xloc>144</xloc>
-      <yloc>416</yloc>
+      <xloc>384</xloc>
+      <yloc>480</yloc>
     </GUI>
   </transform>
   <transform>
@@ -520,6 +520,43 @@
     </GUI>
   </transform>
   <transform>
+    <name>Leitura dos XML</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <file>
+      <file_required>N</file_required>
+      <filemask>.*xml</filemask>
+      <include_subfolders>N</include_subfolders>
+      <name>${PROJECT_HOME}/metadata/dataset/xml/</name>
+    </file>
+    <file>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <filefield>N</filefield>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <isaddresult>Y</isaddresult>
+    <limit>0</limit>
+    <raiseAnExceptionIfNoFile>N</raiseAnExceptionIfNoFile>
+    <rownum>N</rownum>
+    <attributes/>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>672</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Merge join</name>
     <type>MergeJoin</type>
     <description/>
@@ -569,8 +606,8 @@
     <transform2>Sort rows BP</transform2>
     <attributes/>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>224</yloc>
+      <xloc>560</xloc>
+      <yloc>240</yloc>
     </GUI>
   </transform>
   <transform>
@@ -999,6 +1036,21 @@
         <trim_type>none</trim_type>
         <repeat>N</repeat>
       </field>
+      <field>
+        <name>NUMERO-IDENTIFICADOR</name>
+        <xpath>/CURRICULO-VITAE/@NUMERO-IDENTIFICADOR</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
     </fields>
     <limit>0</limit>
     <loopxpath>/CURRICULO-VITAE/PRODUCAO-BIBLIOGRAFICA/ARTIGOS-PUBLICADOS/ARTIGO-PUBLICADO</loopxpath>
@@ -1016,416 +1068,8 @@
     <sizeFieldName/>
     <attributes/>
     <GUI>
-      <xloc>288</xloc>
-      <yloc>560</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Read XML ARTICLE Test </name>
-    <type>getXMLData</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name>${PROJECT_HOME}/metadata/dataset/xml/4021221951532780.xml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>TITULO-DO-ARTIGO</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@TITULO-DO-ARTIGO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ANO-DO-ARTIGO</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@ANO-DO-ARTIGO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>IDIOMA</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@IDIOMA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>MEIO-DE-DIVULGACAO</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@MEIO-DE-DIVULGACAO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>FLAG-RELEVANCIA</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@FLAG-RELEVANCIA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>FLAG-DIVULGACAO-CIENTIFICA</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@FLAG-DIVULGACAO-CIENTIFICA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NATUREZA</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@NATUREZA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>HOME-PAGE-DO-TRABALHO</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@HOME-PAGE-DO-TRABALHO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>TITULO-DO-TRABALHO-INGLES</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@TITULO-DO-ARTIGO-INGLES</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>PAIS-DO-ARTIGO</name>
-        <xpath>/CURRICULO-VITAE/DADOS-GERAIS/@PAIS-DE-NASCIMENTO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>DOI</name>
-        <xpath>DADOS-BASICOS-DO-ARTIGO/@DOI</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>TITULO-DO-PERIODICO-OU-REVISTA</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@TITULO-DO-PERIODICO-OU-REVISTA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ISSN</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@ISSN</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>VOLUME</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@VOLUME</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>SERIE</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@SERIE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>PAGINA-INICIAL</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@PAGINA-INICIAL</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>PAGINA-FINAL</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@PAGINA-FINAL</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>FASCICULO</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@FASCICULO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>QUALIS</name>
-        <xpath>DETALHAMENTO-DO-ARTIGO/@QUALIS</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>TITULO-DO-JORNAL-OU-REVISTA</name>
-        <xpath>/CURRICULO-VITAE/PRODUCAO-BIBLIOGRAFICA/TEXTOS-EM-JORNAIS-OU-REVISTAS/TEXTO-EM-JORNAL-OU-REVISTA/DETALHAMENTO-DO-TEXTO/@TITULO-DO-JORNAL-OU-REVISTA</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ISSN-DO-JORNAL-OU-REVISTA</name>
-        <xpath>/CURRICULO-VITAE/PRODUCAO-BIBLIOGRAFICA/TEXTOS-EM-JORNAIS-OU-REVISTAS/TEXTO-EM-JORNAL-OU-REVISTA/DETALHAMENTO-DO-TEXTO/@ISSN</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>NOME-COMPLETO</name>
-        <xpath>/CURRICULO-VITAE/DADOS-GERAIS/@NOME-COMPLETO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>AUTORES</name>
-        <xpath>AUTORES/@NOME-PARA-CITACAO</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>None</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <loopxpath>/CURRICULO-VITAE/PRODUCAO-BIBLIOGRAFICA/ARTIGOS-PUBLICADOS/ARTIGO-PUBLICADO</loopxpath>
-    <IsInFields>N</IsInFields>
-    <IsAFile>N</IsAFile>
-    <XmlField/>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <attributes/>
-    <GUI>
-      <xloc>144</xloc>
-      <yloc>976</yloc>
+      <xloc>336</xloc>
+      <yloc>592</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1610,8 +1254,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>144</xloc>
-      <yloc>208</yloc>
+      <xloc>320</xloc>
+      <yloc>320</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1959,8 +1603,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>144</xloc>
-      <yloc>304</yloc>
+      <xloc>288</xloc>
+      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform>
@@ -2054,8 +1698,8 @@ FROM "public".researcher
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>32</yloc>
+      <xloc>144</xloc>
+      <yloc>16</yloc>
     </GUI>
   </transform>
   <transform>

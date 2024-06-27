@@ -52,7 +52,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>832</xloc>
+      <xloc>848</xloc>
       <yloc>112</yloc>
       <attributes_hac/>
     </action>
